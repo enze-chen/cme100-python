@@ -1,0 +1,24 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: f50ea22f-ffb8-413e-ad1d-bc0876ecbd9f
+  title: CME 100 Python Workbook
+  description: Python version of MATLAB exercises for CME 100
+  # keywords: []
+  authors: 
+    - name: Enze Chen
+      corresponding: True
+      email: enze@stanford.edu 
+      affiliations: 
+        - id: SU
+          institution: Stanford University
+    - name: Vadim Khayms
+      affiliation: SU
+  github: enze-chen/cme100-python
+  copyright: CC-BY-NC
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
