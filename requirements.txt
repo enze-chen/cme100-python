@@ -1,3 +1,9 @@
-jupyter-book
-matplotlib
-numpy
+python == 3.12.9
+jupyter-book == 1.0.4
+ghp-import == 2.1.0
+
+numpy == 2.2.4
+scipy == 1.15.2
+pandas == 2.2.3
+matplotlib == 3.10.0
+jupyter == 1.1.1

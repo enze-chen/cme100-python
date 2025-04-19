@@ -1,8 +1,35 @@
 # Table of contents. Learn more at https://jupyterbook.org/customize/toc.html
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
-  title: foo bar
+parts:
+  - chapters:
+    - file: workbook/0_usage
+
+  - caption: Getting started (1-6)
+    numbered: 1
+    chapters:
+    - file: workbook/1_saving-work_demo
+      sections: 
+      - file: workbook/1_saving-work_blank
+        title: Your turn
+
+    - file: workbook/2_scalars_demo
+      sections: 
+      - file: workbook/2_scalars_blank
+        title: Your turn
+
+  - caption: Programming (7-23)
+    numbered: 1
+    chapters:
+    - file: workbook/7_programming_demo
+
+  - caption: Linear algebra (24-25)
+    numbered: 1
+    chapters:
+    - file: workbook/24_linalg_demo
+
+  - caption: Tutorials
+    numbered: false
+    chapters:
+    - file: tutorials/1_tut_python_blank
+

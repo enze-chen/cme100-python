@@ -11,7 +11,7 @@ only_build_toc_files      : true      # whether to ignore the extra files
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks       : force
+  execute_notebooks       : cache
   timeout                 : 300       # max seconds for notebook to execute
   allow_errors            : true      # whether to allow and show errors
 
@@ -24,6 +24,7 @@ html:
   use_issues_button       : true      # button for users to submit a GitHub issue
   use_repository_button   : false     # button for users to look at the source code in GitHub.
   home_page_in_navbar     : true      # include home page in the left Navigation Bar 
+  use_multitoc_numbering  : true      # chapter numberings continue across sections
   baseurl                 : https://enze-chen.github.io/cme100-python   # The base URL where the book is hosted
   favicon                 : assets/fig/stanford-s.png      # the icon in the browser tab
   extra_footer            : |
@@ -77,7 +78,7 @@ sphinx:
   config:
     language              : en   # include explicitly for accessibility
     html_extra_path       : ["assets"]
-    html_js_files:
-    - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+    html_js_files         : https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+    mathjax_path          : https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     bibtex_default_style  : plain 
-    suppress_warnings: ["mystnb.unknown_mime_type"]
+    suppress_warnings     : ["mystnb.unknown_mime_type"]
