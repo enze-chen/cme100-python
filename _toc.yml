@@ -5,7 +5,7 @@ parts:
   - chapters:
     - file: workbook/0_usage
 
-  - caption: Getting started (1-6)
+  - caption: Getting started
     numbered: 1
     chapters:
     - file: workbook/1_saving-work_demo
@@ -18,12 +18,12 @@ parts:
       - file: workbook/2_scalars_blank
         title: Your turn
 
-  - caption: Programming (7-23)
+  - caption: Programming
     numbered: 1
     chapters:
     - file: workbook/7_programming_demo
 
-  - caption: Linear algebra (24-25)
+  - caption: Linear algebra
     numbered: 1
     chapters:
     - file: workbook/24_linalg_demo
