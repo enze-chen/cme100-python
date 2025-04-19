@@ -1,8 +1,8 @@
 # Book settings. Learn more at https://jupyterbook.org/customize/config.html
 title                     : My sample book
-author                    : The Jupyter Book Community
+author                    : Enze Chen and Vadim Khayms
 copyright                 : "2025"
-logo                      : logo.png  # logo in top-left corner
+logo                      : assets/fig/icme-logo.png  # logo in top-left corner
 exclude_patterns          : ["README.md", Thumbs.db, .DS_Store, "**.ipynb_checkpoints", "**_master.ipynb"]
 only_build_toc_files      : true      # whether to ignore the extra files
 
@@ -25,10 +25,10 @@ html:
   use_repository_button   : false     # button for users to look at the source code in GitHub.
   home_page_in_navbar     : true      # include home page in the left Navigation Bar 
   baseurl                 : https://enze-chen.github.io/cme100-python   # The base URL where the book is hosted
-  favicon                 : ""      # the icon in the browser tab
+  favicon                 : assets/fig/stanford-s.png      # the icon in the browser tab
   extra_footer            : |
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
     </a>
 
 
