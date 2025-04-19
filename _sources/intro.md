@@ -6,7 +6,6 @@
 Let us know!
 This is the first draft and we'd like to hear your feedback.
 You can open an issue on GitHub or email Enze (`enze@`).
-We could also use your help—there are many CME courses out there that would benefit from Python modules. 🙂
 ```
 ````
 
