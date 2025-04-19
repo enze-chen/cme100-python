@@ -5,7 +5,7 @@
 :class: tip
 Let us know!
 This is the first draft and we'd like to hear your feedback.
-You can open an issue on GitHub or email Enze (`enze@`).
+You can open an issue on GitHub (💡) or email Enze (`enze@`).
 ```
 ````
 
