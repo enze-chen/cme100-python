@@ -31,5 +31,6 @@ parts:
   - caption: Tutorials
     numbered: false
     chapters:
-    - file: tutorials/1_tut_python_blank
+    - file: tutorials/1_fund-plots_blank
+    - file: tutorials/2_control-flow_blank
 
