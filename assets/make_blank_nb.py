@@ -1,11 +1,12 @@
 '''
 Copied liberally from the tool by Zach del Rosario, https://github.com/zdelrosario/jupyter-authoring
-Enze Chen, 2023/01/14
+Enze Chen, 2025/05/02
 '''
 import os 
 import sys
 import nbformat
 import re
+from subprocess import call
 from copy import deepcopy
 from datetime import datetime
 
@@ -49,6 +50,10 @@ def scrub_folder(dirname):
 
             # write blank notebook to file
             nbformat.write(nb_blank, filename_blank)
+
+            # remove cell outputs from blank file
+            call(f"jupyter nbconvert --clear-output --inplace {filename_blank}", shell=True)
+
             print(f"{filename_orig.split('/')[-1]} successfully scrubbed! Blank notebook created.")
 
 
