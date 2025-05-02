@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://enze-chen.github.io/cme100-python/intro.html" />
@@ -372,9 +374,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of contents</a><ul class="nav section-nav flex-column">
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-i-install">What do I install?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#does-it-really-not-matter-which-language-i-learn">Does it <em>really</em> not matter which language I learn?</a></li>
 </ul>
             </nav>
         </div>
@@ -398,7 +399,7 @@ You can open an issue on GitHub (💡) or email Enze (<code class="docutils lite
 </div>
 </aside>
 <p>This Jupyter Book contains a series of Python exercises aimed at introducing you to scientific computing in the context of <a class="reference external" href="https://explorecourses.stanford.edu/search?q=cme100+vector">CME 100: Vector Calculus for Engineers</a> at <a class="reference external" href="https://www.stanford.edu/">Stanford University</a>.
-The exercises are adapted from the MATLAB Workbook by <a class="reference external" href="https://icme.stanford.edu/people/vadim-khayms">Vadim Khayms</a>, Senior Lecturer in Mechanical Engineering, and created to meet the demands of students, faculty, and industry.
+The exercises are adapted from the MATLAB Workbook by <a class="reference external" href="https://icme.stanford.edu/people/vadim-khayms">Vadim Khayms</a>, Senior Lecturer in Mechanical Engineering, and created by <a class="reference external" href="https://enze-chen.github.io/">Enze Chen</a>.
 We hope students will find these exercises useful in their studies!</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -406,40 +407,31 @@ We hope students will find these exercises useful in their studies!</p>
 You will not be rewarded for both, though you’re welcome to do both for practice.
 These pages only have Python, corresponding to the exercises in the original MATLAB Workbook.</p>
 </div>
-<section id="table-of-contents">
-<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="workbook/0_usage.html">Usage tips</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="workbook/1_saving-work_demo.html">1. Saving your work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workbook/2_scalars_demo.html">2. Defining scalar variables</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programming</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="workbook/7_programming_demo.html">3. How to use a script</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear algebra</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="workbook/24_linalg_demo.html">4. Basic matrix operations</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
-</ul>
-</div>
+<section id="what-do-i-install">
+<h2>What do I install?<a class="headerlink" href="#what-do-i-install" title="Link to this heading">#</a></h2>
+<p>Nothing! Unlike the MATLAB exercises, we’ll be doing everything in the cloud.
+If you like the sound of this, keep reading the <a class="reference internal" href="workbook/0_usage.html"><span class="std std-doc">Usage tips</span></a> for instructions on how to complete and submit your work.</p>
 </section>
+<section id="does-it-really-not-matter-which-language-i-learn">
+<h2>Does it <em>really</em> not matter which language I learn?<a class="headerlink" href="#does-it-really-not-matter-which-language-i-learn" title="Link to this heading">#</a></h2>
+<p>Correct.
+In the context of the course, <strong>homeworks and tutorials will still be given in MATLAB</strong> as we experiment with the transition to Python (allowed for optional components), but the underlying computing principles and <a class="reference external" href="https://en.wikipedia.org/wiki/Computational_thinking">computational thinking</a> are the same.
+Sure, certain tasks may be easier in one language than the other as they were developed by different scientific communities, but we anticipate that learning one will serve as a solid foundation so you can easily transition to another programming language in your future work.</p>
+<!-- ## Table of contents
+
+```{tableofcontents}
+``` -->
+</section>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -497,9 +489,8 @@ These pages only have Python, corresponding to the exercises in the original MAT
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of contents</a><ul class="nav section-nav flex-column">
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-i-install">What do I install?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#does-it-really-not-matter-which-language-i-learn">Does it <em>really</em> not matter which language I learn?</a></li>
 </ul>
   </nav></div>
 

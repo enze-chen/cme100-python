@@ -416,11 +416,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="defining-scalar-variables">
 <h1><span class="section-number">2. </span>Defining scalar variables<a class="headerlink" href="#defining-scalar-variables" title="Link to this heading">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is an interactive exercise, so you will want to click the <span class="fa fa-rocket"></span> and open the notebook in Colab if you want to run things yourself.</p>
-</div>
-<p>In addition to being used as a calculator, you can store the inputs or outputs from Python into variables.
+<p>In addition to being used as a calculator, Python can store inputs or outputs into <strong>variables</strong>.
 If a semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code> is placed at the end of a statement, the value of that expression is calculated but not displayed on the screen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -454,7 +450,7 @@ If a semicolon <code class="docutils literal notranslate"><span class="pre">;</s
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute c</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span>   <span class="c1"># exponentiation is two asterisk (not carat!)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span>   <span class="c1"># exponentiation is two asterisks (not carat!)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -483,7 +479,8 @@ If a semicolon <code class="docutils literal notranslate"><span class="pre">;</s
 <h2>“Restart and run all” or it didn’t happen<a class="headerlink" href="#restart-and-run-all-or-it-didnt-happen" title="Link to this heading">#</a></h2>
 <p>With Jupyter notebooks, you have the power to run cells in any order you want.
 And with great power comes great responsibility.
-It’s easy to get variables mixed up and then your notebook starts giving you errors, or worse someone might intentionally use this to conceal duplicitly (e.g., their notebook appears functional based on cell outputs, but actually isn’t when executed from top to bottom).</p>
+It’s easy to get variables mixed up and then your notebook starts giving you errors;
+or worse someone might intentionally use this to conceal duplicitly (e.g., their notebook appears functional based on cell outputs, but actually isn’t when executed from top to bottom).</p>
 <p>So if you ever need to reset anything, the easiest way is to go to <code class="docutils literal notranslate"><span class="pre">Runtime</span> <span class="pre">&gt;</span> <span class="pre">Restart</span> <span class="pre">session</span> <span class="pre">and</span> <span class="pre">run</span> <span class="pre">all</span></code> on Colab or <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">&gt;</span> <span class="pre">Restart</span> <span class="pre">Kernel</span> <span class="pre">and</span> <span class="pre">Run</span> <span class="pre">All</span> <span class="pre">Cells...</span></code> on Jupyter Lab.
 This clears all variables and outputs from the workspace and runs your notebook from top to bottom.</p>
 <div class="admonition note">
@@ -492,7 +489,7 @@ This clears all variables and outputs from the workspace and runs your notebook 
 This is essentially equivalent.</p>
 </div>
 <p>Without rerunning all the cells, you can always just restart the kernel (equivalent to <code class="docutils literal notranslate"><span class="pre">clear</span></code> in MATLAB).
-Try that now by clicking <code class="docutils literal notranslate"><span class="pre">Runtime</span> <span class="pre">&gt;</span> <span class="pre">Restart</span> <span class="pre">session</span></code> or <code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">&gt;</span> <span class="pre">Restart</span> <span class="pre">Kernel...</span></code> and then try running the next cell.</p>
+Try that now by clicking <code class="docutils literal notranslate"><span class="pre">Runtime</span> <span class="pre">&gt;</span> <span class="pre">Restart</span> <span class="pre">session</span></code> or <code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">&gt;</span> <span class="pre">Restart</span> <span class="pre">Kernel...</span></code> and then try running the next cell, which shows the variable you computed before clearing the runtime.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span>

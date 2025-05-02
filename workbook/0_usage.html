@@ -407,13 +407,16 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-python">Why Python? 🐍</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launching-colab">Launching Colab</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-a-jupyter-notebook">Running a Jupyter notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cells">Markdown cells</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">Code cells</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-your-work">Saving your work</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-and-downloading-data">Uploading and downloading data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-help">Getting help</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-your-work">Exporting your work</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
             </nav>
@@ -434,13 +437,11 @@ Here, we will take a moment to explain the UI to help you get the most out of th
 <h2>Navigating the book<a class="headerlink" href="#navigating-the-book" title="Link to this heading">#</a></h2>
 <p>For the most part, you can use the navigation panel on the left to jump quickly to the exercise you’re interested in.
 Each top-level header contains some explanations and a code demo, and nested underneath (click the down chevron (<code class="docutils literal notranslate"><span class="pre">⌄</span></code>)), is a “Your turn” notebook for you to complete and submit.</p>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Even though there’s no Jupyter Book for your homework, you can always create a new Colab notebook (from Google Drive) and write Python code there to solve your problems!</p>
-</div>
-</aside>
+<!-- ````{margin}
+```{tip}
+Even though there's no Jupyter Book for your homework, you can always create a new Colab notebook (from Google Drive) and write Python code there to solve your problems!
+```
+```` -->
 <p>Note that ordinarily, to run Python on your computer requires installing a Python interpreter, a bunch of extra packages, and a text editor or an integrated development environment (IDE) to work in.
 This can be complicated, so instead we’re going to run everything in the cloud using <a class="reference external" href="https://colab.google/">Google Colaboratory (Colab)</a>!</p>
 <aside class="sidebar">
@@ -476,6 +477,10 @@ This growth is in part due to:</p>
 <h3>Launching Colab<a class="headerlink" href="#launching-colab" title="Link to this heading">#</a></h3>
 <p>To launch any notebook in Google Colab, hover over the <span class="fa fa-rocket"></span> icon in the top-right corner, then <kbd>Ctrl</kbd>+click the button <span class="guilabel">∞ Colab</span> (open in new tab), and wait for the environment to load.
 Note that <em>not all pages are interactive</em>, and thus not all pages will have the rocket symbol.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>All of the top-level pages for each chapter, like <a class="reference internal" href="1_saving-work_demo.html"><span class="doc">Saving your work</span></a>, are interactive, so if you want to run and modify the example code yourself, you can!</p>
+</div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p><strong>Try it now</strong> by clicking on the <span class="fa fa-rocket"></span> for this page and read the rest of the page in Colab!</p>
@@ -483,9 +488,13 @@ Note that <em>not all pages are interactive</em>, and thus not all pages will ha
 </section>
 <section id="running-a-jupyter-notebook">
 <h3>Running a Jupyter notebook<a class="headerlink" href="#running-a-jupyter-notebook" title="Link to this heading">#</a></h3>
-<p>The information in Jupyter notebooks is organized into <strong>cells</strong>, which come in many forms.
-This cell is called a <strong>Markdown cell</strong>, which is used for text/media that can be formatted with the <a class="reference external" href="https://www.markdownguide.org/">Markdown</a> markup language.
-You know this is a Markdown cell because there is a white background and no ▶️ on the left side when you’ve selected the cell.</p>
+<p>The information in Jupyter notebooks is organized into <strong>cells</strong>, which come in many forms.</p>
+<section id="markdown-cells">
+<h4>Markdown cells<a class="headerlink" href="#markdown-cells" title="Link to this heading">#</a></h4>
+<p>This cell is called a <strong>Markdown cell</strong>, which is used for text/media that can be formatted with the <a class="reference external" href="https://www.markdownguide.org/">Markdown</a> markup language.
+You know this is a Markdown cell because there is a white background and no ▶️ on the left side when you’ve selected the cell.
+If you double-click a Markdown cell, you can edit it; press <kbd>Shift</kbd>+<kbd>Enter</kbd> to save your edits and exit the cell.</p>
+</section>
 <section id="code-cells">
 <h4>Code cells<a class="headerlink" href="#code-cells" title="Link to this heading">#</a></h4>
 <p>Notice how the next cell looks a little different.
@@ -512,7 +521,8 @@ This number indicates the sequence of code cell execution, which can be handy fo
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>We hope you caught that!
-Use <code class="docutils literal notranslate"><span class="pre">Shift</span></code>+<code class="docutils literal notranslate"><span class="pre">Enter</span></code> to run code cells!</p>
+Use <code class="docutils literal notranslate"><span class="pre">Shift</span></code>+<code class="docutils literal notranslate"><span class="pre">Enter</span></code> to execute the cells!
+Either to run code or save any Markdown text that you’ve edited.</p>
 </div>
 </section>
 </section>
@@ -525,11 +535,23 @@ This allows you to save and return to the notebook with your edits preserved.</p
 </section>
 <section id="uploading-and-downloading-data">
 <h3>Uploading and downloading data<a class="headerlink" href="#uploading-and-downloading-data" title="Link to this heading">#</a></h3>
-<p>After you’ve copied the notebook, you can upload any files to your Colab workspace by dragging it into the empty space in the Files tab (📁) on the left side.
+<p>After you’ve copied the notebook, you can upload any files to your Colab workspace by dragging it into the empty space in the Files tab (📁) on the left side (<a class="reference external" href="https://youtu.be/WrOBVktG1Fs">YouTube tutorial</a>).
 It will warn you that the file will disappear if the runtime disconnects.
 That’s OK, you can always upload it again.</p>
 <p>If your code generates any files (like a saved PNG image), it will also appear in the sidebar where you can download it to your computer.</p>
 </section>
+<section id="getting-help">
+<h3>Getting help<a class="headerlink" href="#getting-help" title="Link to this heading">#</a></h3>
+<p>We would be remiss not to mention that, in addition to your instructors and peers, generative AI is a great tool to help with generating code, learning its structure/syntax, and debugging!
+You can ask questions about parts that are unclear or directly copy-paste any error messages to help you resolve it.
+Try it for free on the <a class="reference external" href="https://aiplayground-prod.stanford.edu/">Stanford AI Playground</a>!</p>
+</section>
+</section>
+<section id="exporting-your-work">
+<h2>Exporting your work<a class="headerlink" href="#exporting-your-work" title="Link to this heading">#</a></h2>
+<p>When you’re ready, the easiest way to export the notebook is to <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Print</span></code> it and save it as a PDF.
+Remove any excessively long, unrelated outputs first by clicking the arrow → next to the output box and then <code class="docutils literal notranslate"><span class="pre">Show/hide</span> <span class="pre">output</span></code>.
+Obviously don’t obscure any necessary output or graphs!</p>
 </section>
 <section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
@@ -607,13 +629,16 @@ You’re ready to start with <a class="reference internal" href="1_saving-work_d
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-python">Why Python? 🐍</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launching-colab">Launching Colab</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-a-jupyter-notebook">Running a Jupyter notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cells">Markdown cells</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">Code cells</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-your-work">Saving your work</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-and-downloading-data">Uploading and downloading data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-help">Getting help</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-your-work">Exporting your work</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
   </nav></div>
