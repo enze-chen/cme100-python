@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. Saving your work &#8212; My sample book</title>
+    <title>6. Basic matrix operations &#8212; My sample book</title>
   
   
   
@@ -57,14 +57,16 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'workbook/1_saving-work_demo';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'workbook/24_linalg_basic_demo';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="canonical" href="https://enze-chen.github.io/cme100-python/workbook/1_saving-work_demo.html" />
+    <link rel="canonical" href="https://enze-chen.github.io/cme100-python/workbook/24_linalg_basic_demo.html" />
     <link rel="icon" href="../_static/stanford-s.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Saving your work - Your turn" href="1_saving-work_blank.html" />
-    <link rel="prev" title="Usage tips" href="0_usage.html" />
+    <link rel="next" title="Basic matrix operations - Your turn" href="24_linalg_basic_blank.html" />
+    <link rel="prev" title="How to use a script - Your turn" href="7_prog_script_blank.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,8 +188,8 @@
 <li class="toctree-l1"><a class="reference internal" href="0_usage.html">Usage tips</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">1. Saving your work</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_saving-work_demo.html">1. Saving your work</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="1_saving-work_blank.html">Your turn</a></li>
 </ul>
 </details></li>
@@ -212,8 +214,8 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear algebra</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="24_linalg_basic_demo.html">6. Basic matrix operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">6. Basic matrix operations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="24_linalg_basic_blank.html">Your turn</a></li>
 </ul>
 </details></li>
@@ -276,7 +278,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/enze-chen/cme100-python/blob/main/workbook/1_saving-work_demo.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/enze-chen/cme100-python/blob/main/workbook/24_linalg_basic_demo.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +298,7 @@
 
 
 
-<a href="https://github.com/enze-chen/cme100-python/issues/new?title=Issue%20on%20page%20%2Fworkbook/1_saving-work_demo.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/enze-chen/cme100-python/issues/new?title=Issue%20on%20page%20%2Fworkbook/24_linalg_basic_demo.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -322,7 +324,7 @@
       
       
       
-      <li><a href="../_sources/workbook/1_saving-work_demo.ipynb" target="_blank"
+      <li><a href="../_sources/workbook/24_linalg_basic_demo.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -406,7 +408,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Saving your work</h1>
+    <h1>Basic matrix operations</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -416,7 +418,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-as-a-calculator">Python as a calculator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduced-row-echelon-form">Reduced row echelon form</a></li>
 </ul>
             </nav>
         </div>
@@ -428,66 +430,174 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="saving-your-work">
-<h1><span class="section-number">1. </span>Saving your work<a class="headerlink" href="#saving-your-work" title="Link to this heading">#</a></h1>
-<p>In MATLAB, you can save your work in a couple of ways:</p>
-<ul class="simple">
-<li><p>Creating a script (<code class="docutils literal notranslate"><span class="pre">.m</span></code> file) or live script (<code class="docutils literal notranslate"><span class="pre">.mlx</span></code> file).</p></li>
-<li><p>Using the <a class="reference external" href="https://www.mathworks.com/help/matlab/ref/diary.html"><code class="docutils literal notranslate"><span class="pre">diary</span></code></a> command to log text inputs and outputs (no graphics).</p></li>
-</ul>
-<p>But this is a Python notebook.
-Much like a live script, Jupyter notebooks are nice for <strong>reproducible science</strong> (and your homework) because all of the text, code, inputs, and outputs (<em>including graphs</em>) are in one place!
-We will demonstrate this by introducing some of the capabilities of Python.</p>
-<section id="python-as-a-calculator">
-<h2>Python as a calculator<a class="headerlink" href="#python-as-a-calculator" title="Link to this heading">#</a></h2>
-<p>You can directly type numerical expressions into a code cell and execute it to run the computation.
-In the example below, the asterisk <code class="docutils literal notranslate"><span class="pre">*</span></code> symbolizes scalar multiplication.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="basic-matrix-operations">
+<h1><span class="section-number">6. </span>Basic matrix operations<a class="headerlink" href="#basic-matrix-operations" title="Link to this heading">#</a></h1>
+<p>There are many matrix operations in Python (NumPy) that make finding solutions to systems equations much easier than doing so by hand.
+In order to use these operations, the matrices and vectors must first be stored in memory.
+Consider the following matrices and vectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} A = \begin{bmatrix} 3 &amp; 5 &amp; 2 \\ 0 &amp; 1 &amp; 2 \\ 3 &amp; 6 &amp; 1 \end{bmatrix}, \qquad B = \begin{bmatrix} 2 &amp; 5 &amp; 4 \\ 4 &amp; 6 &amp; 3 \\ 4 &amp; 10 &amp; 8 \end{bmatrix}, \qquad C = \begin{bmatrix} 1 &amp; 3 \\ 3 &amp; 2 \\ 4 &amp; 5 \end{bmatrix}, \qquad \vec{x} = \begin{bmatrix} 3 \\ 2 \\ 1 \end{bmatrix} \end{split}\]</div>
+<p>Enter the matrices into Python and perform the following operations:<br />
+(a) <span class="math notranslate nohighlight">\(AB\)</span><br />
+(b) <span class="math notranslate nohighlight">\(AC\)</span><br />
+(c) <span class="math notranslate nohighlight">\(CA\)</span><br />
+(d) <span class="math notranslate nohighlight">\(B\vec{x}\)</span><br />
+(e) <span class="math notranslate nohighlight">\(B\vec{x}^T\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">365</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import packages</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># define matrices and vectors</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="p">])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> <span class="p">])</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="p">])</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can print out these variables to see if we did it correctly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>31536000
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[3 5 2]
+ [0 1 2]
+ [3 6 1]]
+
+[[3]
+ [2]
+ [1]] (3, 1)
 </pre></div>
 </div>
 </div>
 </div>
-<p>In addition to <strong>integers</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) and <strong>floats</strong> (<code class="docutils literal notranslate"><span class="pre">float</span></code>, decimals), another data type you will often encounter is <strong>strings</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>), which are literal expressions for text.
-They can be enclosed in double <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> or single <code class="docutils literal notranslate"><span class="pre">'</span></code> quotes, but you have to be consistent.</p>
+<p>If it all looks good, we can proceed with the computation.
+In NumPy, matrix multiplication (successive row-column products) is performed with the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator.
+If you use the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator, <em>it might still work, but it will likely be <strong>wrong</strong></em>, as this will perform element-wise multiplication.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello, World!&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># part a: AB</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AB:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">@</span> <span class="n">B</span><span class="p">)</span>
+
+<span class="c1"># part b: AC</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">AC:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">@</span> <span class="n">C</span><span class="p">)</span>
+
+<span class="c1"># part c: CA</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">CA:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">C</span> <span class="o">@</span> <span class="n">A</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello, World!&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AB:
+[[34 65 43]
+ [12 26 19]
+ [34 61 38]]
+
+AC:
+[[26 29]
+ [11 12]
+ [25 26]]
+
+CA:
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">11</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># part c: CA</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">CA:&quot;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">11</span> <span class="nb">print</span><span class="p">(</span><span class="n">C</span> <span class="o">@</span> <span class="n">A</span><span class="p">)</span>
+
+<span class="nn">ValueError: matmul: Input operand 1 has a mismatch</span> in <span class="ni">its core dimension 0, with gufunc signature (n?,k),(k,m?)-&gt;(n?,m?) </span><span class="nt">(size 3 is different from 2)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Note that in the above two examples, the output automatically appeared when the cell was executed.
-This will occur for the <em>last line only</em> and is sometimes nice, often unintentional.
-To force display, you can use the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, like so:</p>
+<p>As expected, <span class="math notranslate nohighlight">\(CA\)</span> gave an error because the inner dimensions do not match.
+In this next cell, notice how we take the transpose of <span class="math notranslate nohighlight">\(\vec{x}\)</span> by appending a <code class="docutils literal notranslate"><span class="pre">.T</span></code> to the array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># comments start with a pound sign and aren&#39;t printed</span>
-<span class="nb">print</span><span class="p">(</span><span class="mf">3.1415</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CME 100&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># part d: Bx</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Bx:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span> <span class="o">@</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># part e: Bx^T</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Bx^T:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span> <span class="o">@</span> <span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.1415
-CME 100
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bx:
+[[20]
+ [27]
+ [40]]
+
+Bx^T:
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># part e: Bx^T</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Bx^T:&quot;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="n">B</span> <span class="o">@</span> <span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+<span class="nn">ValueError: matmul: Input operand 1 has a mismatch</span> in <span class="ni">its core dimension 0, with gufunc signature (n?,k),(k,m?)-&gt;(n?,m?) </span><span class="nt">(size 1 is different from 3)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">print()</span></code> is very helpful for <em>debugging</em>!
-Feel free to experiment on your own.</p>
+<section id="reduced-row-echelon-form">
+<h2>Reduced row echelon form<a class="headerlink" href="#reduced-row-echelon-form" title="Link to this heading">#</a></h2>
+<p>Next we will reduce <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form using the <a class="reference external" href="https://docs.sympy.org/latest/tutorials/intro-tutorial/matrices.html#rref"><code class="docutils literal notranslate"><span class="pre">rref()</span></code></a> method from the <a class="reference external" href="https://www.sympy.org/en/index.html">SymPy</a> library.
+Unfortunately there’s no built-in method in NumPy, but the SymPy library has its own advantages (look at that <span class="math notranslate nohighlight">\(\LaTeX\)</span>-ified output!).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="kn">import</span> <span class="n">Matrix</span>
+
+<span class="n">A2</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">A2</span><span class="p">)</span>
+
+<span class="n">A2</span><span class="o">.</span><span class="n">rref</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}3 &amp; 5 &amp; 2\\0 &amp; 1 &amp; 2\\3 &amp; 6 &amp; 1\end{matrix}\right]\end{split}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0\\0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>We will also reduce the augmented matrix <span class="math notranslate nohighlight">\([A\ |\ \vec{x}]\)</span>.
+To create this, we will use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html"><code class="docutils literal notranslate"><span class="pre">concatenate()</span></code></a> function from NumPy, where the first argument is the list of matrices/vectors we want to augment, and the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter is the dimension to concatenate along (<code class="docutils literal notranslate"><span class="pre">0</span></code> refers to rows = vertical stacking, <code class="docutils literal notranslate"><span class="pre">1</span></code> refers to columns = horizontal stacking).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ax</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">A</span><span class="p">,</span> <span class="n">x</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Ax</span><span class="p">)</span>
+
+<span class="n">Ax</span><span class="o">.</span><span class="n">rref</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}3 &amp; 5 &amp; 2 &amp; 3\\0 &amp; 1 &amp; 2 &amp; 2\\3 &amp; 6 &amp; 1 &amp; 1\end{matrix}\right]\end{split}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0 &amp; \frac{11}{9}\\0 &amp; 1 &amp; 0 &amp; - \frac{2}{3}\\0 &amp; 0 &amp; 1 &amp; \frac{4}{3}\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -524,20 +634,20 @@ Feel free to experiment on your own.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="0_usage.html"
+       href="7_prog_script_blank.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Usage tips</p>
+        <p class="prev-next-title">How to use a script - Your turn</p>
       </div>
     </a>
     <a class="right-next"
-       href="1_saving-work_blank.html"
+       href="24_linalg_basic_blank.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Saving your work - Your turn</p>
+        <p class="prev-next-title">Basic matrix operations - Your turn</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -557,7 +667,7 @@ Feel free to experiment on your own.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-as-a-calculator">Python as a calculator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduced-row-echelon-form">Reduced row echelon form</a></li>
 </ul>
   </nav></div>
 

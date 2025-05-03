@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. Saving your work &#8212; My sample book</title>
+    <title>3. Vector operations I &#8212; My sample book</title>
   
   
   
@@ -57,14 +57,16 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'workbook/1_saving-work_demo';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'workbook/3_vector_ops_1_demo';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="canonical" href="https://enze-chen.github.io/cme100-python/workbook/1_saving-work_demo.html" />
+    <link rel="canonical" href="https://enze-chen.github.io/cme100-python/workbook/3_vector_ops_1_demo.html" />
     <link rel="icon" href="../_static/stanford-s.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Saving your work - Your turn" href="1_saving-work_blank.html" />
-    <link rel="prev" title="Usage tips" href="0_usage.html" />
+    <link rel="next" title="Vector operations I - Your turn" href="3_vector_ops_1_blank.html" />
+    <link rel="prev" title="Defining scalar variables - Your turn" href="2_scalars_blank.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -187,7 +189,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">1. Saving your work</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_saving-work_demo.html">1. Saving your work</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="1_saving-work_blank.html">Your turn</a></li>
 </ul>
 </details></li>
@@ -195,7 +197,7 @@
 <li class="toctree-l2"><a class="reference internal" href="2_scalars_blank.html">Your turn</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="3_vector_ops_1_demo.html">3. Vector operations I</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">3. Vector operations I</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="3_vector_ops_1_blank.html">Your turn</a></li>
 </ul>
 </details></li>
@@ -276,7 +278,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/enze-chen/cme100-python/blob/main/workbook/1_saving-work_demo.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/enze-chen/cme100-python/blob/main/workbook/3_vector_ops_1_demo.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +298,7 @@
 
 
 
-<a href="https://github.com/enze-chen/cme100-python/issues/new?title=Issue%20on%20page%20%2Fworkbook/1_saving-work_demo.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/enze-chen/cme100-python/issues/new?title=Issue%20on%20page%20%2Fworkbook/3_vector_ops_1_demo.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -322,7 +324,7 @@
       
       
       
-      <li><a href="../_sources/workbook/1_saving-work_demo.ipynb" target="_blank"
+      <li><a href="../_sources/workbook/3_vector_ops_1_demo.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -406,7 +408,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Saving your work</h1>
+    <h1>Vector operations I</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -416,7 +418,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-as-a-calculator">Python as a calculator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-enumeration">Manual enumeration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-functions">Helper functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-want-exactly-n-equally-spaced-values">I want exactly <span class="math notranslate nohighlight">\(N\)</span> equally spaced values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-want-values-equally-spaced-by-delta">I want values equally spaced by <span class="math notranslate nohighlight">\(\delta\)</span></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -428,66 +435,190 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="saving-your-work">
-<h1><span class="section-number">1. </span>Saving your work<a class="headerlink" href="#saving-your-work" title="Link to this heading">#</a></h1>
-<p>In MATLAB, you can save your work in a couple of ways:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="vector-operations-i">
+<h1><span class="section-number">3. </span>Vector operations I<a class="headerlink" href="#vector-operations-i" title="Link to this heading">#</a></h1>
+<p>In engineering mathematics, we often have to work with <strong>vector</strong> quantities, like force, position, electric field, etc.
+In scientific computing in Python, these vectors are encoded as one-dimensional <strong>NumPy arrays</strong>, and these exercises walk you through how to create them.</p>
+<section id="manual-enumeration">
+<h2>Manual enumeration<a class="headerlink" href="#manual-enumeration" title="Link to this heading">#</a></h2>
+<p>One way to create a vector is to manually specify each element.
+We’ll first construct a <strong>list</strong> data structure in Python and use the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to confirm.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;list&#39;&gt;
+[1, 2, 3]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, the above looks like a vector, but we’re not quite done yet.
+We have to convert it to an array using the canonical scientific computing library <a class="reference external" href="https://numpy.org/">NumPy</a>.</p>
+<p>Unlike MATLAB, in Python we have to explicitly import any special packages we want to use, such as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">my_package_name</span>
+
+<span class="n">my_package_name</span><span class="o">.</span><span class="n">special_function</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>And then any functions we want to use from that package will have the package name prepended with a period.
+But, since NumPy is used <em>so</em> frequently, the community has a special paradigm to abbreviate the package import (called an <em>alias</em>) as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">special_function</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This saves your fingers a bit, and we will adopt this practice as well.
+We will import NumPy and then convert the list from above to a NumPy array using the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html"><code class="docutils literal notranslate"><span class="pre">np.array()</span></code></a> constructor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="n">my_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_array</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;numpy.ndarray&#39;&gt;
+[1 2 3]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note how the printed array looks the same as the list, but it is a different class.</p>
+<p>Now we’ll do a series of tasks:</p>
 <ul class="simple">
-<li><p>Creating a script (<code class="docutils literal notranslate"><span class="pre">.m</span></code> file) or live script (<code class="docutils literal notranslate"><span class="pre">.mlx</span></code> file).</p></li>
-<li><p>Using the <a class="reference external" href="https://www.mathworks.com/help/matlab/ref/diary.html"><code class="docutils literal notranslate"><span class="pre">diary</span></code></a> command to log text inputs and outputs (no graphics).</p></li>
+<li><p>Display each element. We can select array elements by using the appropriate <strong>index</strong>, <code class="docutils literal notranslate"><span class="pre">array[ind]</span></code>.</p></li>
+<li><p>Multiple the first and second elements. We use the standard <code class="docutils literal notranslate"><span class="pre">*</span></code> operator with the selected elements.</p></li>
+<li><p>Change the third element to <code class="docutils literal notranslate"><span class="pre">4</span></code> and display the new vector on the screen.</p></li>
 </ul>
-<p>But this is a Python notebook.
-Much like a live script, Jupyter notebooks are nice for <strong>reproducible science</strong> (and your homework) because all of the text, code, inputs, and outputs (<em>including graphs</em>) are in one place!
-We will demonstrate this by introducing some of the capabilities of Python.</p>
-<section id="python-as-a-calculator">
-<h2>Python as a calculator<a class="headerlink" href="#python-as-a-calculator" title="Link to this heading">#</a></h2>
-<p>You can directly type numerical expressions into a code cell and execute it to run the computation.
-In the example below, the asterisk <code class="docutils literal notranslate"><span class="pre">*</span></code> symbolizes scalar multiplication.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Python is <strong>0-indexed</strong> which means the first element of an array is <code class="docutils literal notranslate"><span class="pre">array[0]</span></code>, not <code class="docutils literal notranslate"><span class="pre">1</span></code>!
+This is one of the biggest differences between Python and MATLAB.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">365</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Display each element</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_array</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_array</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_array</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># Multiply the first and second elements</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">my_array</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># Change the third element to 4</span>
+<span class="n">my_array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_array</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>31536000
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+
+2
+
+[1 2 4]
 </pre></div>
 </div>
 </div>
 </div>
-<p>In addition to <strong>integers</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) and <strong>floats</strong> (<code class="docutils literal notranslate"><span class="pre">float</span></code>, decimals), another data type you will often encounter is <strong>strings</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>), which are literal expressions for text.
-They can be enclosed in double <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> or single <code class="docutils literal notranslate"><span class="pre">'</span></code> quotes, but you have to be consistent.</p>
+</section>
+<section id="helper-functions">
+<h2>Helper functions<a class="headerlink" href="#helper-functions" title="Link to this heading">#</a></h2>
+<p>Creating vectors manually isn’t bad when there are only a few elements, but it would be quite annoying if you had dozens or hundreds of entries!
+Luckily, there are some convenient functions that can be employed depending on your use case.</p>
+<section id="i-want-exactly-n-equally-spaced-values">
+<h3>I want exactly <span class="math notranslate nohighlight">\(N\)</span> equally spaced values<a class="headerlink" href="#i-want-exactly-n-equally-spaced-values" title="Link to this heading">#</a></h3>
+<p>Here you want to use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linspace.html"><code class="docutils literal notranslate"><span class="pre">np.linspace(start,</span> <span class="pre">stop,</span> <span class="pre">num)</span></code></a> function, which accepts as arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code>: The first value of your array. Required.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stop</span></code>: The last value of your array. Required.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num</span></code>: The total number of elements in your array, equally spaced between start and stop <em>inclusive</em> (by default).
+If you do not specify this parameter, the default is <code class="docutils literal notranslate"><span class="pre">num=50</span></code>.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello, World!&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_array2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello, World!&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0.  2.  4.  6.  8. 10.]
 </pre></div>
 </div>
 </div>
 </div>
-<p>Note that in the above two examples, the output automatically appeared when the cell was executed.
-This will occur for the <em>last line only</em> and is sometimes nice, often unintentional.
-To force display, you can use the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, like so:</p>
+<p>Some notes:</p>
+<ul class="simple">
+<li><p>In Python, functions can be called with explicit parameter names, if you want.
+So <code class="docutils literal notranslate"><span class="pre">np.linspace(start=0,</span> <span class="pre">stop=10,</span> <span class="pre">num=6)</span></code> also would’ve worked.</p></li>
+<li><p>You can use <code class="docutils literal notranslate"><span class="pre">array.shape</span></code> to check the dimensions of the vector you constructed.
+<code class="docutils literal notranslate"><span class="pre">array.size</span></code> returns the total number of elements (essentially a product of all array dimensions).</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>NumPy can be a little tricky when it comes to vectors (1-D arrays) and whether it’s a row vector or column vector.
+You’ll notice the shape below is abbreviated <code class="docutils literal notranslate"><span class="pre">(6,)</span></code>.
+We’ll discuss this nuance later when we encounter it.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># comments start with a pound sign and aren&#39;t printed</span>
-<span class="nb">print</span><span class="p">(</span><span class="mf">3.1415</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CME 100&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array2_named</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_array2_named</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_array2_named</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.1415
-CME 100
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(6,)
+6
 </pre></div>
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">print()</span></code> is very helpful for <em>debugging</em>!
-Feel free to experiment on your own.</p>
+</section>
+<section id="i-want-values-equally-spaced-by-delta">
+<h3>I want values equally spaced by <span class="math notranslate nohighlight">\(\delta\)</span><a class="headerlink" href="#i-want-values-equally-spaced-by-delta" title="Link to this heading">#</a></h3>
+<p>Here you want to use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.arange.html"><code class="docutils literal notranslate"><span class="pre">np.arange(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code></a> function, which accepts as arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code>: The first value of your array. Default is <code class="docutils literal notranslate"><span class="pre">0</span></code>, but best to always specify.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stop</span></code>: The last value of your array, <strong>not inclusive</strong>. Required.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">step</span></code>: The increment between values starting from <code class="docutils literal notranslate"><span class="pre">start</span></code> and going up to <em>but not including</em> <code class="docutils literal notranslate"><span class="pre">stop</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">1</span></code>, but best to always specify.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># not quite!</span>
+<span class="n">my_array3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_array3</span><span class="p">)</span>
+
+<span class="c1"># better</span>
+<span class="n">my_array3_redo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_array3_redo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 2 4 6 8]
+[ 0  2  4  6  8 10]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -524,20 +655,20 @@ Feel free to experiment on your own.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="0_usage.html"
+       href="2_scalars_blank.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Usage tips</p>
+        <p class="prev-next-title">Defining scalar variables - Your turn</p>
       </div>
     </a>
     <a class="right-next"
-       href="1_saving-work_blank.html"
+       href="3_vector_ops_1_blank.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Saving your work - Your turn</p>
+        <p class="prev-next-title">Vector operations I - Your turn</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -557,7 +688,12 @@ Feel free to experiment on your own.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-as-a-calculator">Python as a calculator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-enumeration">Manual enumeration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-functions">Helper functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-want-exactly-n-equally-spaced-values">I want exactly <span class="math notranslate nohighlight">\(N\)</span> equally spaced values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-want-values-equally-spaced-by-delta">I want values equally spaced by <span class="math notranslate nohighlight">\(\delta\)</span></a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

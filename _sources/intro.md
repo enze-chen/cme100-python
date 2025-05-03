@@ -9,6 +9,11 @@ You can open an issue on GitHub (💡) or email Enze (`enze@`).
 ```
 ````
 
+```{admonition} This book is a work in progress
+:class: warning
+It it not currently being used in any class and things may break at any time.
+```
+
 This Jupyter Book contains a series of Python exercises aimed at introducing you to scientific computing in the context of [CME 100: Vector Calculus for Engineers](https://explorecourses.stanford.edu/search?q=cme100+vector) at [Stanford University](https://www.stanford.edu/).
 The exercises are adapted from the MATLAB Workbook by [Vadim Khayms](https://icme.stanford.edu/people/vadim-khayms), Senior Lecturer in Mechanical Engineering, and created by [Enze Chen](https://enze-chen.github.io/).
 We hope students will find these exercises useful in their studies!
@@ -29,8 +34,8 @@ If you like the sound of this, keep reading the [](workbook/0_usage.ipynb) for i
 
 ## Does it _really_ not matter which language I learn?
 
-Correct. 
-In the context of the course, **homeworks and tutorials will still be given in MATLAB** as we experiment with the transition to Python (allowed for optional components), but the underlying computing principles and [computational thinking](https://en.wikipedia.org/wiki/Computational_thinking) are the same.
+Pretty much. 
+In the context of the course, **homeworks and tutorials will still be given in MATLAB** as we experiment with the transition to Python, but the underlying computing principles and [computational thinking](https://en.wikipedia.org/wiki/Computational_thinking) are the same.
 Sure, certain tasks may be easier in one language than the other as they were developed by different scientific communities, but we anticipate that learning one will serve as a solid foundation so you can easily transition to another programming language in your future work.
 
 

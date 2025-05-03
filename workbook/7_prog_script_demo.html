@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. Saving your work &#8212; My sample book</title>
+    <title>5. How to use a script &#8212; My sample book</title>
   
   
   
@@ -57,14 +57,16 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'workbook/1_saving-work_demo';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'workbook/7_prog_script_demo';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="canonical" href="https://enze-chen.github.io/cme100-python/workbook/1_saving-work_demo.html" />
+    <link rel="canonical" href="https://enze-chen.github.io/cme100-python/workbook/7_prog_script_demo.html" />
     <link rel="icon" href="../_static/stanford-s.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Saving your work - Your turn" href="1_saving-work_blank.html" />
-    <link rel="prev" title="Usage tips" href="0_usage.html" />
+    <link rel="next" title="How to use a script - Your turn" href="7_prog_script_blank.html" />
+    <link rel="prev" title="Vector operations II - Your turn" href="4_vector_ops_2_blank.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,8 +188,8 @@
 <li class="toctree-l1"><a class="reference internal" href="0_usage.html">Usage tips</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">1. Saving your work</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_saving-work_demo.html">1. Saving your work</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="1_saving-work_blank.html">Your turn</a></li>
 </ul>
 </details></li>
@@ -205,8 +207,8 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programming</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="7_prog_script_demo.html">5. How to use a script</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">5. How to use a script</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="7_prog_script_blank.html">Your turn</a></li>
 </ul>
 </details></li>
@@ -276,7 +278,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/enze-chen/cme100-python/blob/main/workbook/1_saving-work_demo.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/enze-chen/cme100-python/blob/main/workbook/7_prog_script_demo.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +298,7 @@
 
 
 
-<a href="https://github.com/enze-chen/cme100-python/issues/new?title=Issue%20on%20page%20%2Fworkbook/1_saving-work_demo.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/enze-chen/cme100-python/issues/new?title=Issue%20on%20page%20%2Fworkbook/7_prog_script_demo.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -322,7 +324,7 @@
       
       
       
-      <li><a href="../_sources/workbook/1_saving-work_demo.ipynb" target="_blank"
+      <li><a href="../_sources/workbook/7_prog_script_demo.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -406,7 +408,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Saving your work</h1>
+    <h1>How to use a script</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -416,7 +418,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-as-a-calculator">Python as a calculator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-more-plots">Making more plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-if-you-wanted-to-use-an-actual-script">What if you wanted to use an actual script?</a></li>
 </ul>
             </nav>
         </div>
@@ -428,66 +431,56 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="saving-your-work">
-<h1><span class="section-number">1. </span>Saving your work<a class="headerlink" href="#saving-your-work" title="Link to this heading">#</a></h1>
-<p>In MATLAB, you can save your work in a couple of ways:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-use-a-script">
+<h1><span class="section-number">5. </span>How to use a script<a class="headerlink" href="#how-to-use-a-script" title="Link to this heading">#</a></h1>
+<p>In this exercise, we’ll cover some more best practices in coding in Jupyter notebooks:</p>
 <ul class="simple">
-<li><p>Creating a script (<code class="docutils literal notranslate"><span class="pre">.m</span></code> file) or live script (<code class="docutils literal notranslate"><span class="pre">.mlx</span></code> file).</p></li>
-<li><p>Using the <a class="reference external" href="https://www.mathworks.com/help/matlab/ref/diary.html"><code class="docutils literal notranslate"><span class="pre">diary</span></code></a> command to log text inputs and outputs (no graphics).</p></li>
+<li><p>Reset and run all: If your variables ever get confusing, just reset the runtime using the menu options and start from the top.
+You can also try adding a <code class="docutils literal notranslate"><span class="pre">%reset</span></code> command at the top of the first cell to explicitly clear all variables and imported packages.
+Use <code class="docutils literal notranslate"><span class="pre">%reset</span> <span class="pre">-f</span></code> to skip the confirmation.</p></li>
+<li><p>Comments are your friend! Use the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol to start an in-line comment.</p></li>
+<li><p>Protip: If you ever forget what a function accepts as arguments, start typing <code class="docutils literal notranslate"><span class="pre">func_name(</span></code> and then after the open parentheses, hit <kbd>Shift</kbd>+<kbd>Tab</kbd> and the docstring should pop up!
+This can save some time from searching it up.</p></li>
 </ul>
-<p>But this is a Python notebook.
-Much like a live script, Jupyter notebooks are nice for <strong>reproducible science</strong> (and your homework) because all of the text, code, inputs, and outputs (<em>including graphs</em>) are in one place!
-We will demonstrate this by introducing some of the capabilities of Python.</p>
-<section id="python-as-a-calculator">
-<h2>Python as a calculator<a class="headerlink" href="#python-as-a-calculator" title="Link to this heading">#</a></h2>
-<p>You can directly type numerical expressions into a code cell and execute it to run the computation.
-In the example below, the asterisk <code class="docutils literal notranslate"><span class="pre">*</span></code> symbolizes scalar multiplication.</p>
+<section id="making-more-plots">
+<h2>Making more plots<a class="headerlink" href="#making-more-plots" title="Link to this heading">#</a></h2>
+<p>We will plot the function <span class="math notranslate nohighlight">\(y = x \sin x\)</span> between 0 and 15 using 1000 points, including labels and a title.
+Remember this will require the use of <a class="reference external" href="https://numpy.org/">NumPy</a> and <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>, both of which must be imported.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">365</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># reset namespace - usually just &quot;Reset and Run All&quot; from the menu</span>
+<span class="o">%</span><span class="k">reset</span> -f
+
+<span class="c1"># import packages with aliases</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># define the function</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># make the plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;nice plot&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>31536000
+<img alt="../_images/15219dea05aa723c3a582fb0097bf7cde65bda0fa596eed1c1fa00a13fa5b4fe.png" src="../_images/15219dea05aa723c3a582fb0097bf7cde65bda0fa596eed1c1fa00a13fa5b4fe.png" />
+</div>
+</div>
+</section>
+<section id="what-if-you-wanted-to-use-an-actual-script">
+<h2>What if you wanted to use an actual script?<a class="headerlink" href="#what-if-you-wanted-to-use-an-actual-script" title="Link to this heading">#</a></h2>
+<p>Well, it’s hard to demo through Jupyter Lab or Google Colab, but you could copy the code that you wrote above, paste it into a Python file (<code class="docutils literal notranslate"><span class="pre">my_script.py</span></code>, for example), and then in your local interpreter, execute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">my_script</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-</div>
-</div>
-<p>In addition to <strong>integers</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>) and <strong>floats</strong> (<code class="docutils literal notranslate"><span class="pre">float</span></code>, decimals), another data type you will often encounter is <strong>strings</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>), which are literal expressions for text.
-They can be enclosed in double <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> or single <code class="docutils literal notranslate"><span class="pre">'</span></code> quotes, but you have to be consistent.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello, World!&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello, World!&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>Note that in the above two examples, the output automatically appeared when the cell was executed.
-This will occur for the <em>last line only</em> and is sometimes nice, often unintentional.
-To force display, you can use the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, like so:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># comments start with a pound sign and aren&#39;t printed</span>
-<span class="nb">print</span><span class="p">(</span><span class="mf">3.1415</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CME 100&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.1415
-CME 100
-</pre></div>
-</div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">print()</span></code> is very helpful for <em>debugging</em>!
-Feel free to experiment on your own.</p>
+<p>and something fairly similar should result.
+This would be equivalent to executing <code class="docutils literal notranslate"><span class="pre">.m</span></code> script files in MATLAB.</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -524,20 +517,20 @@ Feel free to experiment on your own.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="0_usage.html"
+       href="4_vector_ops_2_blank.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Usage tips</p>
+        <p class="prev-next-title">Vector operations II - Your turn</p>
       </div>
     </a>
     <a class="right-next"
-       href="1_saving-work_blank.html"
+       href="7_prog_script_blank.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Saving your work - Your turn</p>
+        <p class="prev-next-title">How to use a script - Your turn</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -557,7 +550,8 @@ Feel free to experiment on your own.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-as-a-calculator">Python as a calculator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-more-plots">Making more plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-if-you-wanted-to-use-an-actual-script">What if you wanted to use an actual script?</a></li>
 </ul>
   </nav></div>
 

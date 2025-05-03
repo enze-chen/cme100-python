@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4. Basic matrix operations &#8212; My sample book</title>
+    <title>6. Basic matrix operations &#8212; My sample book</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -66,7 +66,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="T1: Fundamentals and plotting" href="../tutorials/1_fund-plots_blank.html" />
-    <link rel="prev" title="3. How to use a script" href="7_programming_demo.html" />
+    <link rel="prev" title="How to use a script - Your turn" href="7_programming_blank.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -197,14 +197,25 @@
 <li class="toctree-l2"><a class="reference internal" href="2_scalars_blank.html">Your turn</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_vector_ops_1_demo.html">3. Vector operations I</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_vector_ops_1_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_vector_ops_2_demo.html">4. Vector operations II</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_vector_ops_2_blank.html">Your turn</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programming</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="7_programming_demo.html">3. How to use a script</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="7_programming_demo.html">5. How to use a script</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="7_programming_blank.html">Your turn</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear algebra</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Basic matrix operations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Basic matrix operations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
@@ -417,7 +428,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="basic-matrix-operations">
-<h1><span class="section-number">4. </span>Basic matrix operations<a class="headerlink" href="#basic-matrix-operations" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">6. </span>Basic matrix operations<a class="headerlink" href="#basic-matrix-operations" title="Link to this heading">#</a></h1>
 <p>There are many matrix operations in Python (NumPy) that make finding solutions to systems equations much easier than doing so by hand.
 In order to use these operations, the matrices and vectors must first be stored in memory.
 Consider the following matrices and vectors:</p>
@@ -566,7 +577,7 @@ Unfortunately there’s no built-in method in NumPy, but the SymPy library has i
 </div>
 </div>
 <p>We will also reduce the augmented matrix <span class="math notranslate nohighlight">\([A\ |\ \vec{x}]\)</span>.
-To create this, we will use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html">concatenate()</a> function from NumPy, where the first argument is the list of matrices/vectors we want to augment, and the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter is the dimension to concatenate along (<code class="docutils literal notranslate"><span class="pre">0</span></code> refers to rows = vertical stacking, <code class="docutils literal notranslate"><span class="pre">1</span></code> refers to columns = horizontal stacking).</p>
+To create this, we will use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html"><code class="docutils literal notranslate"><span class="pre">concatenate()</span></code></a> function from NumPy, where the first argument is the list of matrices/vectors we want to augment, and the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter is the dimension to concatenate along (<code class="docutils literal notranslate"><span class="pre">0</span></code> refers to rows = vertical stacking, <code class="docutils literal notranslate"><span class="pre">1</span></code> refers to columns = horizontal stacking).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ax</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">A</span><span class="p">,</span> <span class="n">x</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
@@ -617,12 +628,12 @@ To create this, we will use the <a class="reference external" href="https://nump
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="7_programming_demo.html"
+       href="7_programming_blank.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>How to use a script</p>
+        <p class="prev-next-title">How to use a script - Your turn</p>
       </div>
     </a>
     <a class="right-next"

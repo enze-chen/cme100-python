@@ -3,12 +3,10 @@ Copied liberally from the tool by Zach del Rosario, https://github.com/zdelrosar
 Enze Chen, 2025/05/02
 '''
 import os 
-import sys
 import nbformat
 import re
-from subprocess import call
+from time import sleep
 from copy import deepcopy
-from datetime import datetime
 
 def scrub_folder(dirname):
     files = os.listdir(dirname)
@@ -47,18 +45,23 @@ def scrub_folder(dirname):
                 # write the results
                 nb_blank['cells'][cell_id]["source"] = text_blank
 
+                # remove cell outputs from code cells
+                if cell_orig['cell_type'] == 'code':
+                    nb_blank['cells'][cell_id]["outputs"] = []
+                    nb_blank['cells'][cell_id]["execution_count"] = None
+
 
             # write blank notebook to file
             nbformat.write(nb_blank, filename_blank)
 
             # remove cell outputs from blank file
-            call(f"jupyter nbconvert --clear-output --inplace {filename_blank}", shell=True)
+            # call(f"jupyter nbconvert --clear-output --inplace {filename_blank}", shell=True)
 
-            print(f"{filename_orig.split('/')[-1]} successfully scrubbed! Blank notebook created.")
+            print(f"{filename_orig.split('/')[-1]} successfully scrubbed! Blank notebook created.\n")
+            sleep(0.2)
 
 
 if __name__ == '__main__':
-    print(f'Starting cleaning at {datetime.now()}')
     scrub_folder(os.path.join("cme100-python", "workbook"))
     scrub_folder(os.path.join("cme100-python", "tutorials"))
 
