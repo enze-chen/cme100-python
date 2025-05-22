@@ -18,3 +18,8 @@ Here's what Enze's convoluted process entails (if you don't like it, feel free t
 ```
 python convert_pdf.py {path_to_solution_notebooks} -n {merged_pdf_name.pdf}
 ```
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
