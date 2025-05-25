@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6. Basic matrix operations &#8212; My sample book</title>
+    <title>11. Car motion example &#8212; CME 100 Python Workbook</title>
   
   
   
@@ -59,14 +59,14 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'workbook/24_linalg_demo';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'workbook/11_prog_car_demo';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="canonical" href="https://enze-chen.github.io/cme100-python/workbook/24_linalg_demo.html" />
+    <link rel="canonical" href="https://enze-chen.github.io/cme100-python/workbook/11_prog_car_demo.html" />
     <link rel="icon" href="../_static/stanford-s.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="T1: Fundamentals and plotting" href="../tutorials/1_fund-plots_blank.html" />
-    <link rel="prev" title="How to use a script - Your turn" href="7_programming_blank.html" />
+    <link rel="next" title="Car motion example - Your turn" href="11_prog_car_blank.html" />
+    <link rel="prev" title="While loops - Your turn" href="10_while_loop_blank.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -158,8 +158,8 @@
       
     
     
-    <img src="../_static/icme-logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="../_static/icme-logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+    <img src="../_static/icme-logo.png" class="logo__image only-light" alt="CME 100 Python Workbook - Home"/>
+    <script>document.write(`<img src="../_static/icme-logo.png" class="logo__image only-dark" alt="CME 100 Python Workbook - Home"/>`);</script>
   
   
 </a></div>
@@ -205,22 +205,50 @@
 <li class="toctree-l2"><a class="reference internal" href="4_vector_ops_2_blank.html">Your turn</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_vector_ops_3_demo.html">5. Vector operations III</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_vector_ops_3_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="6_plots_1D_demo.html">6. Plots in 1D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_plots_1D_blank.html">Your turn</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programming</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="7_programming_demo.html">5. How to use a script</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="7_programming_blank.html">Your turn</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="7_prog_script_demo.html">7. How to use a script</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="7_prog_script_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="8_if_else_demo.html">8. If—elif—else statements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="8_if_else_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="9_for_loop_demo.html">9. For loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="9_for_loop_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="10_while_loop_demo.html">10. While loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="10_while_loop_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">11. Car motion example</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_prog_car_blank.html">Your turn</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear algebra</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Basic matrix operations</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="24_linalg_basic_demo.html">12. Basic matrix operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="24_linalg_basic_blank.html">Your turn</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
     </div>
@@ -275,7 +303,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/enze-chen/cme100-python/blob/main/workbook/24_linalg_demo.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/enze-chen/cme100-python/blob/main/workbook/11_prog_car_demo.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +323,7 @@
 
 
 
-<a href="https://github.com/enze-chen/cme100-python/issues/new?title=Issue%20on%20page%20%2Fworkbook/24_linalg_demo.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/enze-chen/cme100-python/issues/new?title=Issue%20on%20page%20%2Fworkbook/11_prog_car_demo.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -321,7 +349,7 @@
       
       
       
-      <li><a href="../_sources/workbook/24_linalg_demo.ipynb" target="_blank"
+      <li><a href="../_sources/workbook/11_prog_car_demo.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -405,7 +433,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Basic matrix operations</h1>
+    <h1>Car motion example</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -415,7 +443,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduced-row-echelon-form">Reduced row echelon form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newtons-laws-of-motion">Newton’s laws of motion</a></li>
 </ul>
             </nav>
         </div>
@@ -427,174 +455,82 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="basic-matrix-operations">
-<h1><span class="section-number">6. </span>Basic matrix operations<a class="headerlink" href="#basic-matrix-operations" title="Link to this heading">#</a></h1>
-<p>There are many matrix operations in Python (NumPy) that make finding solutions to systems equations much easier than doing so by hand.
-In order to use these operations, the matrices and vectors must first be stored in memory.
-Consider the following matrices and vectors:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="car-motion-example">
+<h1><span class="section-number">11. </span>Car motion example<a class="headerlink" href="#car-motion-example" title="Link to this heading">#</a></h1>
+<p>The next few exercises in this workbook will give us a chance to practice what we’ve learned so far through engineering applications.</p>
+<section id="newtons-laws-of-motion">
+<h2>Newton’s laws of motion<a class="headerlink" href="#newtons-laws-of-motion" title="Link to this heading">#</a></h2>
+<p>Starting from rest, a car (mass = <span class="math notranslate nohighlight">\(900\)</span> kg) accelerates under the influence of a force of <span class="math notranslate nohighlight">\(2000\)</span> N until it reaches <span class="math notranslate nohighlight">\(13.89\)</span> m/s (<span class="math notranslate nohighlight">\(50\)</span> km/h).
+What is the distance traveled?
+How long does it take to travel this distance?</p>
+<p>Recall that Newton’s second law of motion says:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} A = \begin{bmatrix} 3 &amp; 5 &amp; 2 \\ 0 &amp; 1 &amp; 2 \\ 3 &amp; 6 &amp; 1 \end{bmatrix}, \qquad B = \begin{bmatrix} 2 &amp; 5 &amp; 4 \\ 4 &amp; 6 &amp; 3 \\ 4 &amp; 10 &amp; 8 \end{bmatrix}, \qquad C = \begin{bmatrix} 1 &amp; 3 \\ 3 &amp; 2 \\ 4 &amp; 5 \end{bmatrix}, \qquad \vec{x} = \begin{bmatrix} 3 \\ 2 \\ 1 \end{bmatrix} \end{split}\]</div>
-<p>Enter the matrices into Python and perform the following operations:<br />
-(a) <span class="math notranslate nohighlight">\(AB\)</span><br />
-(b) <span class="math notranslate nohighlight">\(AC\)</span><br />
-(c) <span class="math notranslate nohighlight">\(CA\)</span><br />
-(d) <span class="math notranslate nohighlight">\(B\vec{x}\)</span><br />
-(e) <span class="math notranslate nohighlight">\(B\vec{x}^T\)</span></p>
+\[ F = m \dfrac{dv}{dt} \tag{1} \]</div>
+<p>This equation determines the velocity of the car as a function of time.
+To obtain the position of the car, we use the following kinematic relation:</p>
+<div class="math notranslate nohighlight">
+\[ v = \dfrac{dx}{dt} \tag{2} \]</div>
+<p>Although this problem can be solved analytically, in this exercise we would like to come up with a numerical solution using Python.
+We first need to discretize the equations, i.e., evaluate the position and velocity at equally spaced discrete points in time, since Python
+doesn’t know how to interpret continuous functions.
+The solution for <span class="math notranslate nohighlight">\(v(t)\)</span> and <span class="math notranslate nohighlight">\(x(t)\)</span> will then be represented by vectors containing the values of the velocity and the position of the car
+respectively at these discrete points in time separated by <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p>
+<p>The time derivative for the velocity in (1) can be approximated by:</p>
+<div class="math notranslate nohighlight">
+\[ \dfrac{dv}{dt} \approx \dfrac{v(t + \Delta t) - v(t)}{\Delta t} \]</div>
+<p>Equation (1) then becomes:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{F}{m} = \dfrac{v(t + \Delta t) - v(t)}{\Delta t} \quad \Leftrightarrow \quad v(t + \Delta t) = v(t) + \Delta t \frac{F}{m} \]</div>
+<p>or, if we solve for the velocity at step <span class="math notranslate nohighlight">\(n+1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ v(n+1) = v(n) + \Delta t \dfrac{F}{m} \]</div>
+<p>where the unknown is <span class="math notranslate nohighlight">\(v(n + 1)\)</span>.</p>
+<p>Similarly, equation (2) becomes:</p>
+<div class="math notranslate nohighlight">
+\[ \dfrac{x(t + \Delta t) - x(t)}{\Delta t} = v(t) \quad \Leftrightarrow \quad x(t + \Delta t) = x(t) + \Delta t v(t) \]</div>
+<p>and the position at step <span class="math notranslate nohighlight">\(n + 1\)</span> will be given by:</p>
+<div class="math notranslate nohighlight">
+\[ x(n+1) = x(n) + \Delta t v(n) \]</div>
+<p>Solve the above equations for position and velocity and plot the position as a function of time.
+Take <span class="math notranslate nohighlight">\(\Delta t = 0.1\)</span> s.
+Display the distance traveled and the time it takes to reach <span class="math notranslate nohighlight">\(50\)</span> km/h.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import packages</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
-<span class="c1"># define matrices and vectors</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="p">])</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> <span class="p">])</span>
-<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="p">])</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can print out these variables to see if we did it correctly.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[3 5 2]
- [0 1 2]
- [3 6 1]]
+<span class="n">F</span> <span class="o">=</span> <span class="mi">2000</span>     <span class="c1"># force in Newtons</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">900</span>      <span class="c1"># mass in kilograms</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.1</span>     <span class="c1"># time step in seconds</span>
+<span class="n">vf</span> <span class="o">=</span> <span class="mf">13.89</span>   <span class="c1"># final velocity</span>
 
-[[3]
- [2]
- [1]] (3, 1)
-</pre></div>
-</div>
-</div>
-</div>
-<p>If it all looks good, we can proceed with the computation.
-In NumPy, matrix multiplication (successive row-column products) is performed with the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator.
-If you use the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator, <em>it might still work, but it will likely be <strong>wrong</strong></em>, as this will perform element-wise multiplication.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># part a: AB</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AB:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">@</span> <span class="n">B</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">v</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-<span class="c1"># part b: AC</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">AC:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">@</span> <span class="n">C</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">v</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">vf</span><span class="p">:</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">dt</span><span class="p">)</span>
+    <span class="n">v</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">F</span><span class="o">/</span><span class="n">m</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>
+    <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">v</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">dt</span><span class="p">)</span>   <span class="c1"># note the indexing!</span>
 
-<span class="c1"># part c: CA</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">CA:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">C</span> <span class="o">@</span> <span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;We traveled </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> m and it took </span><span class="si">{</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> s!&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Position [m]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AB:
-[[34 65 43]
- [12 26 19]
- [34 61 38]]
-
-AC:
-[[26 29]
- [11 12]
- [25 26]]
-
-CA:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>We traveled 43.4 m and it took 6.3 s!
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">11</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># part c: CA</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">CA:&quot;</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">11</span> <span class="nb">print</span><span class="p">(</span><span class="n">C</span> <span class="o">@</span> <span class="n">A</span><span class="p">)</span>
-
-<span class="nn">ValueError: matmul: Input operand 1 has a mismatch</span> in <span class="ni">its core dimension 0, with gufunc signature (n?,k),(k,m?)-&gt;(n?,m?) </span><span class="nt">(size 3 is different from 2)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># part d: Bx</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Bx:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">B</span> <span class="o">@</span> <span class="n">x</span><span class="p">)</span>
-
-<span class="c1"># part e: Bx^T</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Bx^T:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">B</span> <span class="o">@</span> <span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bx:
-[[20]
- [27]
- [40]]
-
-Bx^T:
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># part e: Bx^T</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Bx^T:&quot;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="n">B</span> <span class="o">@</span> <span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
-
-<span class="nn">ValueError: matmul: Input operand 1 has a mismatch</span> in <span class="ni">its core dimension 0, with gufunc signature (n?,k),(k,m?)-&gt;(n?,m?) </span><span class="nt">(size 1 is different from 3)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="reduced-row-echelon-form">
-<h2>Reduced row echelon form<a class="headerlink" href="#reduced-row-echelon-form" title="Link to this heading">#</a></h2>
-<p>Next we will reduce <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form using the <a class="reference external" href="https://docs.sympy.org/latest/tutorials/intro-tutorial/matrices.html#rref"><code class="docutils literal notranslate"><span class="pre">rref()</span></code></a> method from the <a class="reference external" href="https://www.sympy.org/en/index.html">SymPy</a> library.
-Unfortunately there’s no built-in method in NumPy, but the SymPy library has its own advantages (look at that <span class="math notranslate nohighlight">\(\LaTeX\)</span>-ified output!).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="kn">import</span> <span class="n">Matrix</span>
-
-<span class="n">A2</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">A2</span><span class="p">)</span>
-
-<span class="n">A2</span><span class="o">.</span><span class="n">rref</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}3 &amp; 5 &amp; 2\\0 &amp; 1 &amp; 2\\3 &amp; 6 &amp; 1\end{matrix}\right]\end{split}\]</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0\\0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\end{matrix}\right]\end{split}\]</div>
-</div>
-</div>
-<p>We will also reduce the augmented matrix <span class="math notranslate nohighlight">\([A\ |\ \vec{x}]\)</span>.
-To create this, we will use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html"><code class="docutils literal notranslate"><span class="pre">concatenate()</span></code></a> function from NumPy, where the first argument is the list of matrices/vectors we want to augment, and the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter is the dimension to concatenate along (<code class="docutils literal notranslate"><span class="pre">0</span></code> refers to rows = vertical stacking, <code class="docutils literal notranslate"><span class="pre">1</span></code> refers to columns = horizontal stacking).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ax</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">A</span><span class="p">,</span> <span class="n">x</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Ax</span><span class="p">)</span>
-
-<span class="n">Ax</span><span class="o">.</span><span class="n">rref</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}3 &amp; 5 &amp; 2 &amp; 3\\0 &amp; 1 &amp; 2 &amp; 2\\3 &amp; 6 &amp; 1 &amp; 1\end{matrix}\right]\end{split}\]</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0 &amp; \frac{11}{9}\\0 &amp; 1 &amp; 0 &amp; - \frac{2}{3}\\0 &amp; 0 &amp; 1 &amp; \frac{4}{3}\end{matrix}\right]\end{split}\]</div>
+<img alt="../_images/4b9159abd502f2de9c528514e685b51d8e0a20f894c65b88325235d0039fbf46.png" src="../_images/4b9159abd502f2de9c528514e685b51d8e0a20f894c65b88325235d0039fbf46.png" />
 </div>
 </div>
 </section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -628,20 +564,20 @@ To create this, we will use the <a class="reference external" href="https://nump
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="7_programming_blank.html"
+       href="10_while_loop_blank.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">How to use a script - Your turn</p>
+        <p class="prev-next-title">While loops - Your turn</p>
       </div>
     </a>
     <a class="right-next"
-       href="../tutorials/1_fund-plots_blank.html"
+       href="11_prog_car_blank.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">T1: Fundamentals and plotting</p>
+        <p class="prev-next-title">Car motion example - Your turn</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -661,7 +597,7 @@ To create this, we will use the <a class="reference external" href="https://nump
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduced-row-echelon-form">Reduced row echelon form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newtons-laws-of-motion">Newton’s laws of motion</a></li>
 </ul>
   </nav></div>
 
