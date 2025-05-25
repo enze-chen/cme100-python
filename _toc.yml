@@ -28,12 +28,42 @@ parts:
       - file: workbook/4_vector_ops_2_blank
         title: Your turn
 
+    - file: workbook/5_vector_ops_3_demo
+      sections: 
+      - file: workbook/5_vector_ops_3_blank
+        title: Your turn
+
+    - file: workbook/6_plots_1D_demo
+      sections: 
+      - file: workbook/6_plots_1D_blank
+        title: Your turn
+
   - caption: Programming
     numbered: 1
     chapters:
     - file: workbook/7_prog_script_demo
       sections: 
       - file: workbook/7_prog_script_blank
+        title: Your turn
+
+    - file: workbook/8_if_else_demo
+      sections: 
+      - file: workbook/8_if_else_blank
+        title: Your turn
+
+    - file: workbook/9_for_loop_demo
+      sections: 
+      - file: workbook/9_for_loop_blank
+        title: Your turn
+
+    - file: workbook/10_while_loop_demo
+      sections: 
+      - file: workbook/10_while_loop_blank
+        title: Your turn
+
+    - file: workbook/11_prog_car_demo
+      sections: 
+      - file: workbook/11_prog_car_blank
         title: Your turn
 
   - caption: Linear algebra
@@ -49,4 +79,5 @@ parts:
     chapters:
     - file: tutorials/1_fund-plots_blank
     - file: tutorials/2_control-flow_blank
+    - file: tutorials/python_speedrun
 
