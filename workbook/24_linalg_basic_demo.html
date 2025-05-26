@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>12. Basic matrix operations &#8212; CME 100 Python Workbook</title>
+    <title>21. Basic matrix operations &#8212; CME 100 Python Workbook</title>
   
   
   
@@ -66,7 +66,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Basic matrix operations - Your turn" href="24_linalg_basic_blank.html" />
-    <link rel="prev" title="Car motion example - Your turn" href="11_prog_car_blank.html" />
+    <link rel="prev" title="Vectors of random numbers - Your turn" href="20_random_numbers_blank.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -236,10 +236,46 @@
 <li class="toctree-l2"><a class="reference internal" href="11_prog_car_blank.html">Your turn</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="12_prog_circuit_demo.html">12. Electric circuit example</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="12_prog_circuit_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="13_prog_newton_demo.html">13. Newton’s method example</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="13_prog_newton_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="14_surfaces_3D_demo.html">14. Surfaces in 3D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="14_surfaces_3D_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="15_gradient_demo.html">15. Gradient</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="15_gradient_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="16_motion_3D_demo.html">16. Motion of a particle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="16_motion_3D_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="17_level_curves_demo.html">17. Level curves</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="17_level_curves_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="18_function_minima_demo.html">18. Finding minima of functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="18_function_minima_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="19_fitting_data_demo.html">19. Fitting data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="19_fitting_data_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="20_random_numbers_demo.html">20. Vectors of random numbers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="20_random_numbers_blank.html">Your turn</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear algebra</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">12. Basic matrix operations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">21. Basic matrix operations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="24_linalg_basic_blank.html">Your turn</a></li>
 </ul>
 </details></li>
@@ -456,7 +492,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="basic-matrix-operations">
-<h1><span class="section-number">12. </span>Basic matrix operations<a class="headerlink" href="#basic-matrix-operations" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">21. </span>Basic matrix operations<a class="headerlink" href="#basic-matrix-operations" title="Link to this heading">#</a></h1>
 <p>There are many matrix operations in Python (NumPy) that make finding solutions to systems equations much easier than doing so by hand.
 In order to use these operations, the matrices and vectors must first be stored in memory.
 Consider the following matrices and vectors:</p>
@@ -659,12 +695,12 @@ To create this, we will use the <a class="reference external" href="https://nump
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="11_prog_car_blank.html"
+       href="20_random_numbers_blank.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Car motion example - Your turn</p>
+        <p class="prev-next-title">Vectors of random numbers - Your turn</p>
       </div>
     </a>
     <a class="right-next"
@@ -731,8 +767,8 @@ By Enze Chen and Vadim Khayms
   <div class="footer-item">
     
 <div class="extra_footer">
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-  <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+  <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" />
 </a>
 
 </div>
