@@ -66,6 +66,52 @@ parts:
       - file: workbook/11_prog_car_blank
         title: Your turn
 
+    - file: workbook/12_prog_circuit_demo
+      sections: 
+      - file: workbook/12_prog_circuit_blank
+        title: Your turn
+
+    - file: workbook/13_prog_newton_demo
+      sections: 
+      - file: workbook/13_prog_newton_blank
+        title: Your turn
+
+    - file: workbook/14_surfaces_3D_demo
+      sections: 
+      - file: workbook/14_surfaces_3D_blank
+        title: Your turn
+
+    - file: workbook/15_gradient_demo
+      sections: 
+      - file: workbook/15_gradient_blank
+        title: Your turn
+
+    - file: workbook/16_motion_3D_demo
+      sections: 
+      - file: workbook/16_motion_3D_blank
+        title: Your turn
+
+    - file: workbook/17_level_curves_demo
+      sections: 
+      - file: workbook/17_level_curves_blank
+        title: Your turn
+
+    - file: workbook/18_function_minima_demo
+      sections: 
+      - file: workbook/18_function_minima_blank
+        title: Your turn
+
+    - file: workbook/19_fitting_data_demo
+      sections: 
+      - file: workbook/19_fitting_data_blank
+        title: Your turn
+
+    - file: workbook/20_random_numbers_demo
+      sections: 
+      - file: workbook/20_random_numbers_blank
+        title: Your turn
+
+
   - caption: Linear algebra
     numbered: 1
     chapters:
