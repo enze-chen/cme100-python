@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>While loops - Your turn &#8212; CME 100 Python Workbook</title>
+    <title>Computing work done by a force along a path - Your turn &#8212; CME 100 Python Workbook</title>
   
   
   
@@ -59,14 +59,14 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'workbook/10_while_loop_blank';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'workbook/23_work_path_blank';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="canonical" href="https://enze-chen.github.io/cme100-python/workbook/10_while_loop_blank.html" />
+    <link rel="canonical" href="https://enze-chen.github.io/cme100-python/workbook/23_work_path_blank.html" />
     <link rel="icon" href="../_static/stanford-s.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="11. Car motion example" href="11_prog_car_demo.html" />
-    <link rel="prev" title="10. While loops" href="10_while_loop_demo.html" />
+    <link rel="next" title="24. Basic matrix operations" href="24_linalg_basic_demo.html" />
+    <link rel="prev" title="23. Computing work done by a force along a path" href="23_work_path_demo.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -228,8 +228,8 @@
 <li class="toctree-l2"><a class="reference internal" href="9_for_loop_blank.html">Your turn</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="10_while_loop_demo.html">10. While loops</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Your turn</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="10_while_loop_demo.html">10. While loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="10_while_loop_blank.html">Your turn</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="11_prog_car_demo.html">11. Car motion example</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -280,8 +280,8 @@
 <li class="toctree-l2"><a class="reference internal" href="22_integration_blank.html">Your turn</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="23_work_path_demo.html">23. Computing work done by a force along a path</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="23_work_path_blank.html">Your turn</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="23_work_path_demo.html">23. Computing work done by a force along a path</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Your turn</a></li>
 </ul>
 </details></li>
 </ul>
@@ -355,7 +355,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/enze-chen/cme100-python/blob/main/workbook/10_while_loop_blank.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/enze-chen/cme100-python/blob/main/workbook/23_work_path_blank.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -375,7 +375,7 @@
 
 
 
-<a href="https://github.com/enze-chen/cme100-python/issues/new?title=Issue%20on%20page%20%2Fworkbook/10_while_loop_blank.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/enze-chen/cme100-python/issues/new?title=Issue%20on%20page%20%2Fworkbook/23_work_path_blank.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -401,7 +401,7 @@
       
       
       
-      <li><a href="../_sources/workbook/10_while_loop_blank.ipynb" target="_blank"
+      <li><a href="../_sources/workbook/23_work_path_blank.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -485,7 +485,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>While loops - Your turn</h1>
+    <h1>Computing work done by a force along a path - Your turn</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -495,8 +495,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1">Part 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-your-work">Exporting your work</a></li>
 </ul>
             </nav>
@@ -509,14 +507,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="while-loops-your-turn">
-<h1>While loops - Your turn<a class="headerlink" href="#while-loops-your-turn" title="Link to this heading">#</a></h1>
-<section id="part-1">
-<h2>Part 1<a class="headerlink" href="#part-1" title="Link to this heading">#</a></h2>
-<p>In the demonstrated algorithm, <span class="math notranslate nohighlight">\(x\)</span> is a list containing all the successive approximations of <span class="math notranslate nohighlight">\(\sqrt{10}\)</span>.
-We are usually interested only in the final result and don’t need to store each intermediate step.
-Modify the previous script so that <span class="math notranslate nohighlight">\(x\)</span> is now a scalar iterate that overwrites the previous one.
-Compute <span class="math notranslate nohighlight">\(\sqrt{11}\)</span> to an error of less than <span class="math notranslate nohighlight">\(10^{-4}\)</span>, starting with <span class="math notranslate nohighlight">\(x = 1\)</span>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="computing-work-done-by-a-force-along-a-path-your-turn">
+<h1>Computing work done by a force along a path - Your turn<a class="headerlink" href="#computing-work-done-by-a-force-along-a-path-your-turn" title="Link to this heading">#</a></h1>
+<p>Suppose that the spacecraft is now traveling in an orbit specified by the following parametric equation:</p>
+<div class="math notranslate nohighlight">
+\[ r(t) = 1.5 \times 10^{11} \cos(t)\ \vec{i} + 1.3 \times 10^{11} \sin(t)\ \vec{j} + 10^9 \cos(t)\ \vec{k} \quad \text{where}\ 0 \le t \le 2\pi \]</div>
+<p>Compute the work done by solar radiation for <span class="math notranslate nohighlight">\(0 \le t \le \dfrac{\pi}{2} \)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Write your solution below</span>
@@ -524,19 +520,6 @@ Compute <span class="math notranslate nohighlight">\(\sqrt{11}\)</span> to an er
 </div>
 </div>
 </div>
-</section>
-<section id="part-2">
-<h2>Part 2<a class="headerlink" href="#part-2" title="Link to this heading">#</a></h2>
-<p>Using the modified code, determine how many iterations are necessary to reach the required accuracy.</p>
-<p>Hint: Add a counter whose value is incremented by one each time you perform an iteration.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Write your solution below</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 <section id="exporting-your-work">
 <h2>Exporting your work<a class="headerlink" href="#exporting-your-work" title="Link to this heading">#</a></h2>
 <p>When you’re ready, the easiest way to export the notebook is to <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Print</span></code> it and save it as a PDF.
@@ -576,20 +559,20 @@ Obviously don’t obscure any necessary output or graphs!</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="10_while_loop_demo.html"
+       href="23_work_path_demo.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>While loops</p>
+        <p class="prev-next-title"><span class="section-number">23. </span>Computing work done by a force along a path</p>
       </div>
     </a>
     <a class="right-next"
-       href="11_prog_car_demo.html"
+       href="24_linalg_basic_demo.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">11. </span>Car motion example</p>
+        <p class="prev-next-title"><span class="section-number">24. </span>Basic matrix operations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -609,8 +592,6 @@ Obviously don’t obscure any necessary output or graphs!</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1">Part 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-your-work">Exporting your work</a></li>
 </ul>
   </nav></div>

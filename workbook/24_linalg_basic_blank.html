@@ -65,8 +65,8 @@
     <link rel="icon" href="../_static/stanford-s.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="T1: Fundamentals and plotting" href="../tutorials/1_fund-plots_blank.html" />
-    <link rel="prev" title="21. Basic matrix operations" href="24_linalg_basic_demo.html" />
+    <link rel="next" title="25. Additional matrix operations" href="25_linalg_more_demo.html" />
+    <link rel="prev" title="24. Basic matrix operations" href="24_linalg_basic_demo.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -272,11 +272,27 @@
 <li class="toctree-l2"><a class="reference internal" href="20_random_numbers_blank.html">Your turn</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="21_random_numbers_2_demo.html">21. More random numbers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="21_random_numbers_2_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="22_integration_demo.html">22. Numerical integration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="22_integration_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="23_work_path_demo.html">23. Computing work done by a force along a path</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="23_work_path_blank.html">Your turn</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear algebra</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="24_linalg_basic_demo.html">21. Basic matrix operations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="24_linalg_basic_demo.html">24. Basic matrix operations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="25_linalg_more_demo.html">25. Additional matrix operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="25_linalg_more_blank.html">Your turn</a></li>
 </ul>
 </details></li>
 </ul>
@@ -456,7 +472,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -472,6 +490,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-your-work">Exporting your work</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -509,6 +535,12 @@ If an operation is undefined, explain what Python does:<br />
 </div>
 </div>
 </div>
+<section id="exporting-your-work">
+<h2>Exporting your work<a class="headerlink" href="#exporting-your-work" title="Link to this heading">#</a></h2>
+<p>When you’re ready, the easiest way to export the notebook is to <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Print</span></code> it and save it as a PDF.
+Remove any excessively long, unrelated outputs first by clicking the arrow → next to the output box and then <code class="docutils literal notranslate"><span class="pre">Show/hide</span> <span class="pre">output</span></code>.
+Obviously don’t obscure any necessary output or graphs!</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -547,15 +579,15 @@ If an operation is undefined, explain what Python does:<br />
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">21. </span>Basic matrix operations</p>
+        <p class="prev-next-title"><span class="section-number">24. </span>Basic matrix operations</p>
       </div>
     </a>
     <a class="right-next"
-       href="../tutorials/1_fund-plots_blank.html"
+       href="25_linalg_more_demo.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">T1: Fundamentals and plotting</p>
+        <p class="prev-next-title"><span class="section-number">25. </span>Additional matrix operations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -565,6 +597,21 @@ If an operation is undefined, explain what Python does:<br />
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-your-work">Exporting your work</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

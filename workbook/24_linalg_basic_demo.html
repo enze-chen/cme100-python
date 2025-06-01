@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>21. Basic matrix operations &#8212; CME 100 Python Workbook</title>
+    <title>24. Basic matrix operations &#8212; CME 100 Python Workbook</title>
   
   
   
@@ -66,7 +66,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Basic matrix operations - Your turn" href="24_linalg_basic_blank.html" />
-    <link rel="prev" title="Vectors of random numbers - Your turn" href="20_random_numbers_blank.html" />
+    <link rel="prev" title="Computing work done by a force along a path - Your turn" href="23_work_path_blank.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -272,11 +272,27 @@
 <li class="toctree-l2"><a class="reference internal" href="20_random_numbers_blank.html">Your turn</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="21_random_numbers_2_demo.html">21. More random numbers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="21_random_numbers_2_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="22_integration_demo.html">22. Numerical integration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="22_integration_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="23_work_path_demo.html">23. Computing work done by a force along a path</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="23_work_path_blank.html">Your turn</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear algebra</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">21. Basic matrix operations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">24. Basic matrix operations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="24_linalg_basic_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="25_linalg_more_demo.html">25. Additional matrix operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="25_linalg_more_blank.html">Your turn</a></li>
 </ul>
 </details></li>
 </ul>
@@ -492,7 +508,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="basic-matrix-operations">
-<h1><span class="section-number">21. </span>Basic matrix operations<a class="headerlink" href="#basic-matrix-operations" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">24. </span>Basic matrix operations<a class="headerlink" href="#basic-matrix-operations" title="Link to this heading">#</a></h1>
 <p>There are many matrix operations in Python (NumPy) that make finding solutions to systems equations much easier than doing so by hand.
 In order to use these operations, the matrices and vectors must first be stored in memory.
 Consider the following matrices and vectors:</p>
@@ -641,6 +657,11 @@ Unfortunately there’s no built-in method in NumPy, but the SymPy library has i
 \[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0\\0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depending on your Python environment, you may have to install SymPy before you can import it, i.e., <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sympy</span></code>.
+Luckily, Colab comes with it pre-installed!</p>
+</div>
 <p>We will also reduce the augmented matrix <span class="math notranslate nohighlight">\([A\ |\ \vec{x}]\)</span>.
 To create this, we will use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html"><code class="docutils literal notranslate"><span class="pre">concatenate()</span></code></a> function from NumPy, where the first argument is the list of matrices/vectors we want to augment, and the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter is the dimension to concatenate along (<code class="docutils literal notranslate"><span class="pre">0</span></code> refers to rows = vertical stacking, <code class="docutils literal notranslate"><span class="pre">1</span></code> refers to columns = horizontal stacking).</p>
 <div class="cell docutils container">
@@ -695,12 +716,12 @@ To create this, we will use the <a class="reference external" href="https://nump
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="20_random_numbers_blank.html"
+       href="23_work_path_blank.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Vectors of random numbers - Your turn</p>
+        <p class="prev-next-title">Computing work done by a force along a path - Your turn</p>
       </div>
     </a>
     <a class="right-next"
