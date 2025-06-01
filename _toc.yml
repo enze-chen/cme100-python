@@ -111,6 +111,21 @@ parts:
       - file: workbook/20_random_numbers_blank
         title: Your turn
 
+    - file: workbook/21_random_numbers_2_demo
+      sections: 
+      - file: workbook/21_random_numbers_2_blank
+        title: Your turn
+
+    - file: workbook/22_integration_demo
+      sections: 
+      - file: workbook/22_integration_blank
+        title: Your turn
+
+    - file: workbook/23_work_path_demo
+      sections: 
+      - file: workbook/23_work_path_blank
+        title: Your turn
+
 
   - caption: Linear algebra
     numbered: 1
@@ -118,6 +133,11 @@ parts:
     - file: workbook/24_linalg_basic_demo
       sections: 
       - file: workbook/24_linalg_basic_blank
+        title: Your turn
+
+    - file: workbook/25_linalg_more_demo
+      sections: 
+      - file: workbook/25_linalg_more_blank
         title: Your turn
 
   - caption: Tutorials
