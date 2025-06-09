@@ -145,5 +145,9 @@ parts:
     chapters:
     - file: tutorials/1_fund-plots_blank
     - file: tutorials/2_control-flow_blank
+    - file: tutorials/3_matrices_blank
+    - file: tutorials/4_matrix_ops_blank
+    - file: tutorials/5_optimization_blank
+    - file: tutorials/6_integration_blank
     - file: tutorials/python_speedrun
 
