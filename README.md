@@ -1,4 +1,7 @@
-# cme100-python
+# CME 100 Python Workbook
+
+© [Enze Chen](https://mse.stanford.edu/people/enze-chen), 
+[Vadim Khayms](https://icme.stanford.edu/people/vadim-khayms)
 
 Python version of MATLAB exercises for CME 100 at Stanford University.
 
