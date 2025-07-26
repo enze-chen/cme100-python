@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -520,10 +524,14 @@ document.write(`
 <h2>Summary of commands<a class="headerlink" href="#summary-of-commands" title="Link to this heading">#</a></h2>
 <p>In this exercise, we will demonstrate the following:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html"><code class="docutils literal notranslate"><span class="pre">np.meshgrid()</span></code></a> - Create a 2D grid of coordinate values.</p></li>
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html"><code class="docutils literal notranslate"><span class="pre">np.meshgrid(x,</span> <span class="pre">y)</span></code></a> - Create a 2D grid of coordinate values based on 1D <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> arrays.</p>
+<ul>
+<li><p>The result is two <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code> <em>2D arrays</em> with the corresponding 1D arrays tiled across the other dimension.</p></li>
+</ul>
+</li>
 <li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.add_subplot.html"><code class="docutils literal notranslate"><span class="pre">fig.add_subplot(projection='3d')</span></code></a> - A common way of creating 3D axes.</p></li>
-<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/mpl_toolkits.mplot3d.axes3d.Axes3D.plot_surface.html"><code class="docutils literal notranslate"><span class="pre">ax.plot_surface()</span></code></a> - Create a 3D surface on the domain defined by meshgrid.</p></li>
-<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.colorbar.html"><code class="docutils literal notranslate"><span class="pre">fig.colorbar()</span></code></a> - Add a color bar.</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/mpl_toolkits.mplot3d.axes3d.Axes3D.plot_surface.html"><code class="docutils literal notranslate"><span class="pre">ax.plot_surface(X,</span> <span class="pre">Y,</span> <span class="pre">Z)</span></code></a> - Create a 3D surface plot of <code class="docutils literal notranslate"><span class="pre">Z</span></code> on the domain defined by meshgrid <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.colorbar.html"><code class="docutils literal notranslate"><span class="pre">fig.colorbar(obj)</span></code></a> - Add a color bar corresponding to the <code class="docutils literal notranslate"><span class="pre">obj</span></code> plot element.</p></li>
 </ul>
 <p>We will plot the function</p>
 <div class="math notranslate nohighlight">
@@ -531,8 +539,11 @@ document.write(`
 <p>for <span class="math notranslate nohighlight">\(x\)</span> ranging between <span class="math notranslate nohighlight">\(-3\)</span> and <span class="math notranslate nohighlight">\(3\)</span>, and <span class="math notranslate nohighlight">\(y\)</span> ranging between <span class="math notranslate nohighlight">\(-4\)</span> and <span class="math notranslate nohighlight">\(4\)</span>.
 Use an increment of <span class="math notranslate nohighlight">\(0.1\)</span> in both directions.
 Include labels and a title, and add a color bar to the figure.</p>
-<p>Note: The <span class="math notranslate nohighlight">\(10^{-16}\)</span> in the denominator is needed to avoid division by zero when <span class="math notranslate nohighlight">\(x = y = 0\)</span>.
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <span class="math notranslate nohighlight">\(10^{-16}\)</span> in the denominator is needed to avoid division by zero when <span class="math notranslate nohighlight">\(x = y = 0\)</span>.
 Some sources may write this as <span class="math notranslate nohighlight">\(\varepsilon\)</span> (Greek letter epsilon) to represent a tiny quantity.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -585,8 +596,8 @@ Otherwise the whole plot is a default blue and less helpful.</p></li>
 <h3>Other<a class="headerlink" href="#other" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>We had to tweak the color bar a little bit to make it fit better.
-See the documentation for more details.</p></li>
-<li><p>We might not get the nice click-and-drag features of MATLAB plots in Colab (there are other interactive plotting libraries), but if you wanted to change the viewing angle, you can explore <a class="reference external" href="https://matplotlib.org/stable/api/toolkits/mplot3d/view_angles.html"><code class="docutils literal notranslate"><span class="pre">ax.view_init()</span></code></a>.</p></li>
+See the <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.colorbar.html">documentation</a> for more details.</p></li>
+<li><p>We might not get the nice click-and-drag features of MATLAB plots in Colab (there are other interactive plotting libraries), but if you wanted to change the viewing angle, you can explore <a class="reference external" href="https://matplotlib.org/stable/api/toolkits/mplot3d/view_angles.html"><code class="docutils literal notranslate"><span class="pre">ax.view_init(elev,</span> <span class="pre">azim,</span> <span class="pre">roll)</span></code></a>.</p></li>
 </ul>
 </section>
 </section>

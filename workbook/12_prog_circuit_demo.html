@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -507,14 +511,14 @@ Test your code for the following input:</p>
 <div class="math notranslate nohighlight">
 \[ V(t) = 3 + 3 \sin(3t) \quad \text{for}\ t \ge 0 \]</div>
 <p>Use the time step <span class="math notranslate nohighlight">\(\Delta t = 0.1\)</span>.
-Plot <span class="math notranslate nohighlight">\(V(t)\)</span> and <span class="math notranslate nohighlight">\(I(t)\)</span> on the same set of axes for <span class="math notranslate nohighlight">\(t\)</span> ranging between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(2\pi\)</span> seconds.</p>
+Plot <span class="math notranslate nohighlight">\(V(t)\)</span> and <span class="math notranslate nohighlight">\(I(t)\)</span> on the same set of axes using different styles for <span class="math notranslate nohighlight">\(t\)</span> ranging between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(2\pi\)</span> seconds.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
-<span class="n">V</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="n">V</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
 <span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">V</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">V</span><span class="p">)):</span>
@@ -533,7 +537,7 @@ Plot <span class="math notranslate nohighlight">\(V(t)\)</span> and <span class=
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;input voltage&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;output current&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;output current&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Time [s]&quot;</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">13</span><span class="p">])</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>    <span class="c1"># make it smaller so it fits</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -541,8 +545,12 @@ Plot <span class="math notranslate nohighlight">\(V(t)\)</span> and <span class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/77f30b973270da6b125a410c5b6b406561a51ee8332ba49bb64bdfdb7d78da79.png" src="../_images/77f30b973270da6b125a410c5b6b406561a51ee8332ba49bb64bdfdb7d78da79.png" />
+<img alt="../_images/9e42042cf1a416f970aefd73f144de75ebe86625f0ddb5a650c265f27b96bc84.png" src="../_images/9e42042cf1a416f970aefd73f144de75ebe86625f0ddb5a650c265f27b96bc84.png" />
 </div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice how <code class="docutils literal notranslate"><span class="pre">label=</span></code> in the plotting function and <code class="docutils literal notranslate"><span class="pre">ax.legend()</span></code> work together to label different lines!</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>

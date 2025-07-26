@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -513,7 +517,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="fitting-data-your-turn">
 <h1>Fitting data - Your turn<a class="headerlink" href="#fitting-data-your-turn" title="Link to this heading">#</a></h1>
 <p>The same students have repeated their experiments at Reynolds numbers between <span class="math notranslate nohighlight">\(10^4\)</span> and <span class="math notranslate nohighlight">\(10^5\)</span> and have found a constant drag coefficient of <span class="math notranslate nohighlight">\(C_{\mathrm{D}} = 0.4775\)</span>.
-Assume the density of air <span class="math notranslate nohighlight">\(\rho\)</span> is 1.25 kg/m<span class="math notranslate nohighlight">\(^3\)</span>.
+Assume the density of air <span class="math notranslate nohighlight">\(\rho\)</span> is <span class="math notranslate nohighlight">\(1.25\)</span> kg/m<span class="math notranslate nohighlight">\(^3\)</span>.
 The following table gives the drag force on the sphere as a function of the air speed.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -545,7 +549,7 @@ The following table gives the drag force on the sphere as a function of the air 
 <h2>Part (a)<a class="headerlink" href="#part-a" title="Link to this heading">#</a></h2>
 <p>In the definition of the drag force:</p>
 <div class="math notranslate nohighlight">
-\[ F_{\mathrm{D}} = \dfrac{1}{2} C_{\mathrm{D}} \rho V^2 \pi r^2 \]</div>
+\[ F_{\mathrm{D}} = \dfrac{1}{2} C_{\mathrm{D}} \rho V^2 \pi r^2, \]</div>
 <p>the group <span class="math notranslate nohighlight">\(\dfrac{1}{2} C_{\mathrm{D}} \rho \pi r^2\)</span> is now a constant, since the drag coefficient is assumed to be constant.
 That means that the plot of <span class="math notranslate nohighlight">\(F_{\mathrm{D}}\)</span> vs. <span class="math notranslate nohighlight">\(V^2\)</span> should be close to a straight line.
 Using <code class="docutils literal notranslate"><span class="pre">polyfit()</span></code>, find an equation of a line that best fits the data given in the table.</p>

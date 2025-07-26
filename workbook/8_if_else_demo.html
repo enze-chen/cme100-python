@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -517,11 +521,11 @@ Here we’ll work with the <code class="docutils literal notranslate"><span clas
 <h2>Conditional statements<a class="headerlink" href="#conditional-statements" title="Link to this heading">#</a></h2>
 <p>In Python, the general structure is like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition1</span><span class="p">:</span>
-    <span class="n">do</span> <span class="n">something</span> <span class="n">only</span> <span class="n">when</span> <span class="n">condition1</span> <span class="ow">is</span> <span class="kc">True</span>
+    <span class="o">&lt;</span><span class="n">do</span> <span class="n">something</span> <span class="n">only</span> <span class="n">when</span> <span class="n">condition1</span> <span class="ow">is</span> <span class="kc">True</span><span class="o">&gt;</span>
 <span class="k">elif</span> <span class="n">condition2</span><span class="p">:</span>
-    <span class="n">otherwise</span><span class="p">,</span> <span class="n">do</span> <span class="n">something</span> <span class="k">if</span> <span class="n">condition2</span> <span class="ow">is</span> <span class="kc">True</span> <span class="p">(</span><span class="ow">and</span> <span class="n">condition1</span> <span class="n">was</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="o">&lt;</span><span class="n">otherwise</span><span class="p">,</span> <span class="n">do</span> <span class="n">something</span> <span class="k">else</span> <span class="k">if</span> <span class="n">condition2</span> <span class="ow">is</span> <span class="kc">True</span><span class="o">&gt;</span> <span class="p">(</span><span class="ow">and</span> <span class="n">condition1</span> <span class="n">was</span> <span class="kc">False</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">otherwise</span><span class="p">,</span> <span class="n">do</span> <span class="n">something</span>
+    <span class="o">&lt;</span><span class="n">otherwise</span><span class="p">,</span> <span class="n">do</span> <span class="n">something</span> <span class="k">else</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -568,8 +572,11 @@ Write a program computing the amount owed given the price per apple (assume it t
 <section id="part-2">
 <h2>Part 2<a class="headerlink" href="#part-2" title="Link to this heading">#</a></h2>
 <p>Suppose now the store offers a super discount of <span class="math notranslate nohighlight">\(40\%\)</span> if you buy more than <span class="math notranslate nohighlight">\(20\)</span> apples.
-Modify the code in Part 1 to implement this new condition using the <code class="docutils literal notranslate"><span class="pre">elif</span></code> statement.
-Note that when programming conditional statements, we generally put equality conditions first, followed by bounded inequalities, and finally unbounded conditions.</p>
+Modify the code in Part 1 to implement this new condition using the <code class="docutils literal notranslate"><span class="pre">elif</span></code> statement.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When programming conditional statements, we generally put equality conditions first, followed by bounded inequalities, and finally unbounded conditions.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">21</span>       <span class="c1"># number of apples purchased</span>
@@ -596,7 +603,7 @@ Note that when programming conditional statements, we generally put equality con
 <p class="admonition-title">Important</p>
 <p>In Python, logical “and” uses the actual word <code class="docutils literal notranslate"><span class="pre">and</span></code> instead of the symbols <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> as it’s commonly done in other languages.
 Similarly, logical “or” uses the actual word <code class="docutils literal notranslate"><span class="pre">or</span></code>.
-Finally, please don’t confuse these keywords with the literal strings <code class="docutils literal notranslate"><span class="pre">'and'</span></code> and <code class="docutils literal notranslate"><span class="pre">'or'</span></code>!</p>
+Finally, please don’t confuse these keywords (no quotes) with the literal strings <code class="docutils literal notranslate"><span class="pre">'and'</span></code> and <code class="docutils literal notranslate"><span class="pre">'or'</span></code>!</p>
 </div>
 </section>
 <div class="toctree-wrapper compound">

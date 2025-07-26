@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -516,14 +520,15 @@ document.write(`
 Here we’re going to look at a specific type of loop called a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, which is used when you know how many times you want to repeat an action.</p>
 <section id="summary-of-commands">
 <h2>Summary of commands<a class="headerlink" href="#summary-of-commands" title="Link to this heading">#</a></h2>
-<p>In Python, the general structure is like this:</p>
+<p>In Python, the general structure of a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">collection</span><span class="p">:</span>
-    <span class="n">do</span> <span class="n">something</span> <span class="n">repeatedly</span><span class="p">,</span> <span class="n">where</span> <span class="n">each</span> <span class="n">iteration</span><span class="p">,</span> <span class="n">the</span> <span class="n">variable</span> <span class="n">i</span> <span class="n">takes</span> <span class="n">on</span> <span class="n">a</span> <span class="n">different</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">collection</span>
+    <span class="o">&lt;</span><span class="n">do</span> <span class="n">something</span> <span class="n">repeatedly</span><span class="p">,</span> <span class="n">where</span> <span class="n">each</span> <span class="n">iteration</span><span class="p">,</span> <span class="n">the</span> <span class="n">variable</span> <span class="n">i</span> <span class="n">takes</span> <span class="n">on</span> <span class="n">a</span> <span class="n">different</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">collection</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">collection</span></code> is usually a list-like object of values.
 The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop stops when all the items in the collection are used once.
-A very common expression you’ll see for <code class="docutils literal notranslate"><span class="pre">collection</span></code> is <code class="docutils literal notranslate"><span class="pre">range(N)</span></code>, which is a <a class="reference external" href="https://docs.python.org/3/library/functions.html#func-range">built-in function</a> that enumerates numbers from <code class="docutils literal notranslate"><span class="pre">0</span></code> up to <code class="docutils literal notranslate"><span class="pre">N</span></code> (<em>not</em> inclusive).</p>
+A very common expression you’ll see for <code class="docutils literal notranslate"><span class="pre">collection</span></code> is <a class="reference external" href="https://docs.python.org/3/library/functions.html#func-range"><code class="docutils literal notranslate"><span class="pre">range(N)</span></code></a>, which is a built-in function that enumerates numbers from <code class="docutils literal notranslate"><span class="pre">0</span></code> up to <code class="docutils literal notranslate"><span class="pre">N</span></code> (<em>not</em> inclusive).
+The full function is <code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code>.</p>
 </section>
 <section id="part-1">
 <h2>Part 1<a class="headerlink" href="#part-1" title="Link to this heading">#</a></h2>
@@ -532,7 +537,7 @@ That is, the product of all the integers from <span class="math notranslate nohi
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">product</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>    <span class="c1"># we specify the start</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>    <span class="c1"># we specify the start, because we don&#39;t want to include 0!</span>
     <span class="n">product</span> <span class="o">*=</span> <span class="n">i</span>          <span class="c1"># shorthand notation for self-multiplication</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
 </pre></div>
@@ -600,14 +605,24 @@ y(x) &amp;= \ln(x) \qquad &amp;x &gt; 1
 <span class="c1"># define an empty y vector of the same length</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 
-<span class="c1"># using logical indices as a mask</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">xx</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>    <span class="c1"># return the index,value of each element</span>
-    <span class="k">if</span> <span class="n">xx</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">xx</span>
-    <span class="k">elif</span> <span class="n">xx</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">xx</span><span class="p">)</span>
+<span class="c1"># loop through the indices</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">xx</span><span class="p">)</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="sd">&quot;&quot;&quot; alternative way to loop</span>
+<span class="sd">for i,xx in enumerate(x):    # return the index,value of each element in x</span>
+<span class="sd">    if xx &lt; 0:</span>
+<span class="sd">        y[i] = xx</span>
+<span class="sd">    elif xx &lt;= 1:</span>
+<span class="sd">        y[i] = np.sin(np.pi * xx)</span>
+<span class="sd">    else:</span>
+<span class="sd">        y[i] = np.log(xx)</span>
+<span class="sd">&quot;&quot;&quot;</span>
 
 <span class="c1"># plot y as a function of x</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>

@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -518,9 +522,13 @@ document.write(`
 <p>In this exercise, we will demonstrate the following:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/random/generator.html"><code class="docutils literal notranslate"><span class="pre">np.random.default_rng()</span></code></a> - Object for generating random values.
-This is the <strong>preferred way</strong> to generate random numbers in Python.</p></li>
-<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.normal.html"><code class="docutils literal notranslate"><span class="pre">rng.normal()</span></code></a> - Draw random numbers from a normal distribution.</p></li>
-<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html"><code class="docutils literal notranslate"><span class="pre">ax.hist()</span></code></a> - Create a frequency plot (histogram).</p></li>
+This is the <strong>preferred way</strong> to generate random numbers in Python.</p>
+<ul>
+<li><p>Optional <code class="docutils literal notranslate"><span class="pre">seed</span></code> parameter for reproducibility.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.normal.html"><code class="docutils literal notranslate"><span class="pre">rng.normal(loc,</span> <span class="pre">scale,</span> <span class="pre">size)</span></code></a> - Draw <code class="docutils literal notranslate"><span class="pre">size</span></code> random numbers from a normal distribution with mean <code class="docutils literal notranslate"><span class="pre">loc</span></code> and standard deviation <code class="docutils literal notranslate"><span class="pre">scale</span></code>.</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html"><code class="docutils literal notranslate"><span class="pre">ax.hist(x,</span> <span class="pre">bins)</span></code></a> - Create a frequency plot (histogram) of values in <code class="docutils literal notranslate"><span class="pre">x</span></code> using <code class="docutils literal notranslate"><span class="pre">bins</span></code> number of bins (optional).</p></li>
 </ul>
 </section>
 <section id="manufacturing-uncertainty">
@@ -553,8 +561,7 @@ Here, <span class="math notranslate nohighlight">\(\mu = 5\)</span> mm.</p></li>
 <span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span>
 
 <span class="c1"># sampling</span>
-<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>    <span class="c1"># construct an object to call</span>
-                                       <span class="c1"># seed for consistency</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>    <span class="c1"># construct an object to call; seed for consistency</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -578,8 +585,11 @@ Here, <span class="math notranslate nohighlight">\(\mu = 5\)</span> mm.</p></li>
 <img alt="../_images/650c305498b15f272e5124b5525b4da69c90542b7ddb28603c2021c91b446bf0.png" src="../_images/650c305498b15f272e5124b5525b4da69c90542b7ddb28603c2021c91b446bf0.png" />
 </div>
 </div>
-<p>Note: The <code class="docutils literal notranslate"><span class="pre">ax.hist()</span></code> command takes the vector generated by the <code class="docutils literal notranslate"><span class="pre">rng.normal()</span></code> command as input and counts the number of bolts having a diameter within a certain range (a bin).
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ax.hist()</span></code> command takes the vector generated by the <code class="docutils literal notranslate"><span class="pre">rng.normal()</span></code> command as input and counts the number of bolts having a diameter within a certain range (a bin).
 The number of bins is defined by the second parameter, and it is somewhat of an art to choose the “correct” bin size for the plot to look nice.</p>
+</div>
 </section>
 <div class="toctree-wrapper compound">
 </div>

@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -516,7 +520,7 @@ document.write(`
 <h2>Summary of commands<a class="headerlink" href="#summary-of-commands" title="Link to this heading">#</a></h2>
 <p>In this exercise, we will demonstrate the following:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin.html"><code class="docutils literal notranslate"><span class="pre">scipy.optimize.fmin()</span></code></a> - Minimize a function.</p></li>
+<li><p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin.html"><code class="docutils literal notranslate"><span class="pre">scipy.optimize.fmin(func,</span> <span class="pre">x0)</span></code></a> - Minimize a function <code class="docutils literal notranslate"><span class="pre">func</span></code> given an initial guess <code class="docutils literal notranslate"><span class="pre">x0</span></code>.</p></li>
 </ul>
 <p>This is part of the <a class="reference external" href="https://docs.scipy.org/doc/scipy/index.html">SciPy</a> package, which we have yet to see in this class!
 Whereas NumPy provides the foundational array structure, SciPy contains a lot of helpful routines that operate on such structures, such as <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/optimize.html">optimization</a>, <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/stats.html">statistics</a>, <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/integrate.html">integration</a>, etc.</p>
@@ -537,17 +541,18 @@ In Python, the syntax for defining your own function is:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">my_func_name</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
     <span class="n">do</span> <span class="n">something</span>
-    <span class="k">return</span> <span class="n">something</span><span class="p">,</span> <span class="n">optionally</span>
+    <span class="k">return</span> <span class="n">something</span>   <span class="c1"># optional</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">def</span></code> at the start is required, as is the colon at the end.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">def</span></code> at the start is required, as is the colon at the end of the first line.</p></li>
 <li><p>Just like variables, function names should be descriptive.</p></li>
 <li><p>Arguments are optional.</p></li>
+<li><p>Returning a value is generally optional, but here we want to return the expression for the analytical function.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">fmin</span>    <span class="c1"># take note of syntax!</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">fmin</span>    <span class="c1"># take note of syntax when importing specific functions!</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
@@ -583,12 +588,15 @@ In Python, the syntax for defining your own function is:</p></li>
 <h2>Part (b) - Functions of several variables<a class="headerlink" href="#part-b-functions-of-several-variables" title="Link to this heading">#</a></h2>
 <p>Find the minimum of the function <span class="math notranslate nohighlight">\(f(x,y) = \cos(xy) \sin(x)\)</span> over the domain <span class="math notranslate nohighlight">\(0 &lt; x &lt; \pi\)</span>, <span class="math notranslate nohighlight">\(0 &lt; y &lt; \pi\)</span>.
 Start by plotting the function to approximately locate the minimum and use these approximate values as your initial guess.</p>
-<p><strong>Important</strong>: <code class="docutils literal notranslate"><span class="pre">fmin()</span></code> can be kinda quirky.
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><code class="docutils literal notranslate"><span class="pre">fmin()</span></code> can be kinda quirky.
 If you have two variables <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>, instead of inputting them as separate arguments, instead group them into a list, i.e., <code class="docutils literal notranslate"><span class="pre">u</span> <span class="pre">=</span> <span class="pre">[x,</span> <span class="pre">y]</span></code>.
 Then your <code class="docutils literal notranslate"><span class="pre">x0</span></code> will be a list as well for the initial guesses.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the function</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the function - note the grouping of x,y into a list u</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">new_func</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
@@ -602,16 +610,22 @@ Then your <code class="docutils literal notranslate"><span class="pre">x0</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">,</span> <span class="n">antialiased</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># minimum appears to be near (1.5, 2)</span>
-
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/bca2c20a8ba0822983ed9501acd1dd986cdae532a3e2860b1b8f143e2047b37e.png" src="../_images/bca2c20a8ba0822983ed9501acd1dd986cdae532a3e2860b1b8f143e2047b37e.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># minimum appears to be near (1.5, 2)</span>
 <span class="n">minimum</span> <span class="o">=</span> <span class="n">fmin</span><span class="p">(</span><span class="n">new_func</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="n">display</span><span class="p">(</span><span class="n">minimum</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/bca2c20a8ba0822983ed9501acd1dd986cdae532a3e2860b1b8f143e2047b37e.png" src="../_images/bca2c20a8ba0822983ed9501acd1dd986cdae532a3e2860b1b8f143e2047b37e.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization terminated successfully.
          Current function value: -1.000000
          Iterations: 25

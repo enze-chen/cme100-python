@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -535,12 +539,12 @@ The area is assumed to be constant <span class="math notranslate nohighlight">\(
 <div class="math notranslate nohighlight">
 \[ r(t) = 1.5 \times 10^{11} \cos(t)\ \vec{i} + 1.3 \times 10^{11} \sin(t)\ \vec{j} \quad \text{with}\ 0 \le t \le 2\pi \]</div>
 <p>Find the work done by the force of solar radiation on the spacecraft over the following interval: <span class="math notranslate nohighlight">\(0 \le t \le \dfrac{\pi}{2} \)</span>.
-Use the time step of <span class="math notranslate nohighlight">\(\delta t = 0.001\)</span></p>
+Use the time step of <span class="math notranslate nohighlight">\(dt = 0.001\)</span>.</p>
 <section id="procedure">
 <h3>Procedure<a class="headerlink" href="#procedure" title="Link to this heading">#</a></h3>
 <p>To calcuate the work done, we apply the following formula:</p>
 <div class="math notranslate nohighlight">
-\[ W = \int \vec{F} \cdot \mathrm{d}\vec{r} = \int \vec{F} \cdot \vec{v}\ \mathrm{d}t = \int |\vec{F}| |\vec{v}| \cos\theta\ \mathrm{d}t \]</div>
+\[ W = \int \vec{F} \cdot \mathrm{d}\vec{r} = \int \vec{F} \cdot \vec{v}\ \mathrm{d}t = \int |\vec{F}| |\vec{v}| \cos\theta\ \mathrm{d}t, \]</div>
 <p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between the velocity vector and the force.
 Each component of the integrand is computed separately.
 Then the integral is computed using the <code class="docutils literal notranslate"><span class="pre">trapezoid()</span></code> command.</p>
@@ -590,7 +594,7 @@ Then the integral is computed using the <code class="docutils literal notranslat
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Due to slight differences in implementation, particularly with handling boundary values, the result from <code class="docutils literal notranslate"><span class="pre">trapezoid()</span></code> in Python will differ from the result obtained using <code class="docutils literal notranslate"><span class="pre">trapz()</span></code> in MATLAB.</p>
+<p>Due to slight differences in implementation, particularly with handling boundary values, the result from <code class="docutils literal notranslate"><span class="pre">trapezoid()</span></code> in Python will differ from the result obtained using <code class="docutils literal notranslate"><span class="pre">trapz()</span></code> in MATLAB. 🤷🏼‍♂️</p>
 </div>
 </section>
 </section>

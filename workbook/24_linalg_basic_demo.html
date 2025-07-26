@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -511,7 +515,8 @@ document.write(`
 <h1><span class="section-number">24. </span>Basic matrix operations<a class="headerlink" href="#basic-matrix-operations" title="Link to this heading">#</a></h1>
 <p>There are many matrix operations in Python (NumPy) that make finding solutions to systems equations much easier than doing so by hand.
 In order to use these operations, the matrices and vectors must first be stored in memory.
-Consider the following matrices and vectors:</p>
+NumPy can be used to create matrices, or 2D arrays, starting from a list of lists, as we’ll see below.</p>
+<p>Consider the following matrices and vectors:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} A = \begin{bmatrix} 3 &amp; 5 &amp; 2 \\ 0 &amp; 1 &amp; 2 \\ 3 &amp; 6 &amp; 1 \end{bmatrix}, \qquad B = \begin{bmatrix} 2 &amp; 5 &amp; 4 \\ 4 &amp; 6 &amp; 3 \\ 4 &amp; 10 &amp; 8 \end{bmatrix}, \qquad C = \begin{bmatrix} 1 &amp; 3 \\ 3 &amp; 2 \\ 4 &amp; 5 \end{bmatrix}, \qquad \vec{x} = \begin{bmatrix} 3 \\ 2 \\ 1 \end{bmatrix} \end{split}\]</div>
 <p>Enter the matrices into Python and perform the following operations:<br />
@@ -526,7 +531,7 @@ Consider the following matrices and vectors:</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># define matrices and vectors</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="p">])</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="p">])</span>   <span class="c1"># each inner list is a row of the matrix</span>
 <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> <span class="p">])</span>
 <span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="p">])</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">])</span>
@@ -555,6 +560,8 @@ Consider the following matrices and vectors:</p>
 </div>
 </div>
 </div>
+<p>You may recall from back in <a class="reference internal" href="3_vector_ops_1_demo.html"><span class="doc">Vector operations I</span></a> we talked about the shapes of 1D arrays.
+Here, based on the way we constructed <code class="docutils literal notranslate"><span class="pre">x</span></code>, both dimensions are present! (so it is more like a true column vector)</p>
 <p>If it all looks good, we can proceed with the computation.
 In NumPy, matrix multiplication (successive row-column products) is performed with the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator.
 If you use the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator, <em>it might still work, but it will likely be <strong>wrong</strong></em>, as this will perform element-wise multiplication.</p>
@@ -663,7 +670,7 @@ Unfortunately there’s no built-in method in NumPy, but the SymPy library has i
 Luckily, Colab comes with it pre-installed!</p>
 </div>
 <p>We will also reduce the augmented matrix <span class="math notranslate nohighlight">\([A\ |\ \vec{x}]\)</span>.
-To create this, we will use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html"><code class="docutils literal notranslate"><span class="pre">concatenate()</span></code></a> function from NumPy, where the first argument is the list of matrices/vectors we want to augment, and the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter is the dimension to concatenate along (<code class="docutils literal notranslate"><span class="pre">0</span></code> refers to rows = vertical stacking, <code class="docutils literal notranslate"><span class="pre">1</span></code> refers to columns = horizontal stacking).</p>
+To create this, we will use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html"><code class="docutils literal notranslate"><span class="pre">np.concatenate(list_of_arr,</span> <span class="pre">axis)</span></code></a> function from NumPy, where the first argument is the list of matrices/vectors we want to augment, and the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter is the dimension to concatenate along (<code class="docutils literal notranslate"><span class="pre">0</span></code> refers to rows = vertical stacking, <code class="docutils literal notranslate"><span class="pre">1</span></code> refers to columns = horizontal stacking).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ax</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">A</span><span class="p">,</span> <span class="n">x</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>

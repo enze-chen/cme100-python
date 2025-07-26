@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -515,14 +519,14 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="level-curves">
 <h1><span class="section-number">17. </span>Level curves<a class="headerlink" href="#level-curves" title="Link to this heading">#</a></h1>
 <p>We’ve already worked with plotting surfaces, but sometimes we want to indicate points on the surface that are at the same height (<span class="math notranslate nohighlight">\(z\)</span>-coordinate).
-A set of such points is called a <strong>level curve</strong>, and you may be familiar with seeing them on contour maps!
+A set of such points is called a <strong>level curve</strong>, and you may be familiar with seeing them on contour maps when exploring the great outdoors!
 But in addition to helping you navigate a physical landscape, level curves occur all the time in engineering mathematics when optimizing functions in high-dimensional spaces.</p>
 <section id="summary-of-commands">
 <h2>Summary of commands<a class="headerlink" href="#summary-of-commands" title="Link to this heading">#</a></h2>
 <p>In this exercise, we will demonstrate the following:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html"><code class="docutils literal notranslate"><span class="pre">np.meshgrid()</span></code></a> - Create a 2D grid of coordinate values.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ax.contour()</span></code> - Plot contour lines.
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html"><code class="docutils literal notranslate"><span class="pre">np.meshgrid(x,</span> <span class="pre">y)</span></code></a> - Create a 2D grid of coordinate values based on <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> arrays.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ax.contour(X,</span> <span class="pre">Y,</span> <span class="pre">Z)</span></code> - Plot contour lines for <code class="docutils literal notranslate"><span class="pre">Z</span></code> across the domain given by <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code>.
 Note there is <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.contour.html">a 2D</a> and <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/mpl_toolkits.mplot3d.axes3d.Axes3D.contour.html">a 3D</a> version.</p></li>
 </ul>
 </section>
@@ -563,8 +567,8 @@ Show the surface plot <em>and</em> the contour lines in a plane below.</p>
 </section>
 <section id="part-b">
 <h3>Part (b)<a class="headerlink" href="#part-b" title="Link to this heading">#</a></h3>
-<p>Make a 2D contour plot of the above using the <code class="docutils literal notranslate"><span class="pre">ax.contour()</span></code> function.
-This will only display the level curves in a horizontal plane.
+<p>Make a 2D contour plot of the above using the <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.contour.html"><code class="docutils literal notranslate"><span class="pre">ax.contour()</span></code></a> function.
+This will only display the level curves in a horizontal plane, and you should verify that it is consistent with the previous plot.
 Include labels and a title.</p>
 <p>Note: Using the contour command, you can specify the number of <code class="docutils literal notranslate"><span class="pre">levels</span></code> you would like to be displayed.</p>
 <div class="cell docutils container">

@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -519,8 +523,8 @@ document.write(`
 <h2>Summary of commands<a class="headerlink" href="#summary-of-commands" title="Link to this heading">#</a></h2>
 <p>In this exercise, we will demonstrate the following:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.gradient.html"><code class="docutils literal notranslate"><span class="pre">np.gradient()</span></code></a> - Computes the numerical derivative of a function.</p></li>
-<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.arccos.html"><code class="docutils literal notranslate"><span class="pre">np.arccos()</span></code></a> - Computes the inverse cosine.</p></li>
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.gradient.html"><code class="docutils literal notranslate"><span class="pre">np.gradient(y,</span> <span class="pre">x)</span></code></a> - Computes the numerical derivative of a function <code class="docutils literal notranslate"><span class="pre">y</span></code> with a spacing defined by <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.arccos.html"><code class="docutils literal notranslate"><span class="pre">np.arccos(x)</span></code></a> - Computes the inverse cosine of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
 </ul>
 <p>The motion of a particle in three dimensions is given by the following parametric equations:</p>
 <div class="math notranslate nohighlight">
@@ -535,7 +539,7 @@ z(t) &amp;= 0
 <section id="part-a">
 <h2>Part (a)<a class="headerlink" href="#part-a" title="Link to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(\Delta t = 0.1\)</span>.
-Plot the particle’s trajectory in 3D using <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code>.</p>
+Plot the particle’s trajectory in 3D using <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/mpl_toolkits.mplot3d.axes3d.Axes3D.plot.html"><code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -546,18 +550,19 @@ Plot the particle’s trajectory in 3D using <code class="docutils literal notra
 <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="n">z</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">t</span>   <span class="c1"># so it&#39;s the same length</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">t</span>   <span class="c1"># so it&#39;s the same length as the other arrays</span>
 
 <span class="c1"># make a plot</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">zlabel</span><span class="o">=</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a82654fe475aa38d93c573b7985c482b9b6768e5a6e824d4f420bd7c44e8cda8.png" src="../_images/a82654fe475aa38d93c573b7985c482b9b6768e5a6e824d4f420bd7c44e8cda8.png" />
+<img alt="../_images/90baeba6db7b0e6cf64520ceaa91a318cd96a28db71c0d2f715531d67622d88b.png" src="../_images/90baeba6db7b0e6cf64520ceaa91a318cd96a28db71c0d2f715531d67622d88b.png" />
 </div>
 </div>
 </section>
@@ -623,6 +628,24 @@ Plot the particle’s trajectory in 3D using <code class="docutils literal notra
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">((</span><span class="n">vx</span> <span class="o">*</span> <span class="n">ax</span> <span class="o">+</span> <span class="n">vy</span> <span class="o">*</span> <span class="n">ay</span><span class="p">)</span> <span class="o">/</span> <span class="n">speed</span> <span class="o">/</span> <span class="n">accel</span><span class="p">)</span>
+<span class="n">theta</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.74381977, 1.78273525, 1.85495636, 1.97138039, 2.06439307,
+       2.13377245, 2.18087053, 2.20727665, 2.21409273, 2.20162567,
+       2.16932095, 2.11588817, 2.0397079 , 1.93972052, 1.81694275,
+       1.67624376, 1.52704366, 1.38143673, 1.25034503, 1.14057129,
+       1.05453971, 0.99183718, 0.95093376, 0.93033042, 0.92913875,
+       0.94730482, 0.98562065, 1.04553183, 1.12861343, 1.23550156,
+       1.36422403, 1.50855975, 1.65798661, 1.80033427, 1.92569072,
+       2.02861905, 2.10771652, 2.16388005, 2.19872022, 2.21359787,
+       2.20916979, 2.18523603, 2.1407826 , 2.07425186, 1.98420339,
+       1.87057053, 1.7364322 , 1.58937576, 1.44078869, 1.30256088,
+       1.18339891, 1.08742301, 1.01517252, 0.96540454, 0.9365088 ,
+       0.92729992, 0.93736505, 0.9671546 , 1.01788256, 1.09116384,
+       1.18819715, 1.24873431, 1.28284446])
 </pre></div>
 </div>
 </div>

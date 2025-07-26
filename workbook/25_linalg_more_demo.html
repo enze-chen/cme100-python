@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -575,12 +579,11 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Beware!</strong>
-Matrix <span class="math notranslate nohighlight">\(A\)</span> is singular, and if you’re lucky, NumPy will spit out a <code class="docutils literal notranslate"><span class="pre">LinAlgError</span></code>.
+<div class="warning admonition">
+<p class="admonition-title">Beware!!</p>
+<p>Matrix <span class="math notranslate nohighlight">\(A\)</span> is singular, and if you’re lucky, NumPy will spit out a <code class="docutils literal notranslate"><span class="pre">LinAlgError</span></code>.
 Sometimes, however, it will still give a numerical result, where the array has values that are really big, i.e., <span class="math notranslate nohighlight">\(\infty\)</span>, or really small, i.e., all <span class="math notranslate nohighlight">\(0\)</span>.
-Whenever it comes to numerical linear algebra, your spidey senses should be tingling, as it’s a perfect recipe for <strong>floating-point errors</strong>.</p>
+Whenever it comes to numerical linear algebra, you should always be wary of <strong>floating-point errors</strong>.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

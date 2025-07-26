@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -517,9 +521,9 @@ document.write(`
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.trapezoid.html"><code class="docutils literal notranslate"><span class="pre">scipy.integrate.trapezoid()</span></code></a> - Computes the integral of a function over a given domain using the trapezoidal method.</p></li>
 </ul>
-<p>This function comes from the <a class="reference external" href="https://docs.scipy.org/doc/scipy/index.html">SciPy</a> package and has the signature <code class="docutils literal notranslate"><span class="pre">trapezoid(y,x)</span></code>, where:</p>
+<p>This function comes from the <a class="reference external" href="https://docs.scipy.org/doc/scipy/index.html">SciPy</a> package and has the signature <code class="docutils literal notranslate"><span class="pre">trapezoid(y,</span> <span class="pre">x)</span></code>, where:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">y</span></code> is an <strong>array of values</strong> corresponding to <span class="math notranslate nohighlight">\(f(x)\)</span>.
+<li><p><code class="docutils literal notranslate"><span class="pre">y</span></code> is an <strong>array of <span class="math notranslate nohighlight">\(y\)</span> values</strong> corresponding to <span class="math notranslate nohighlight">\(f(x)\)</span>.
 It is <em>not</em> the analytical expression for <span class="math notranslate nohighlight">\(f(x)\)</span> the way it was for <code class="docutils literal notranslate"><span class="pre">fmin()</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> is an <strong>array of <span class="math notranslate nohighlight">\(x\)</span> values</strong> corresponding to each of the values in the <code class="docutils literal notranslate"><span class="pre">y</span></code> array.
 This argument is technically optional, but then the default assumes <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">...]</span></code> (or <span class="math notranslate nohighlight">\(\Delta x = 1\)</span>) which probably will not result in the correct answer!</p></li>

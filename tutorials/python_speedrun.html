@@ -57,13 +57,15 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/python_speedrun';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://enze-chen.github.io/cme100-python/tutorials/python_speedrun.html" />
     <link rel="icon" href="../_static/stanford-s.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="T2: Control flow" href="2_control-flow_blank.html" />
+    <link rel="prev" title="T6: Integration" href="6_integration_blank.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -297,6 +299,10 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -532,13 +538,14 @@ document.write(`
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To save your progress, make a copy of this notebook in Colab <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Save</span> <span class="pre">a</span> <span class="pre">copy</span></code> and you’ll find it in <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Drive</span> <span class="pre">&gt;</span> <span class="pre">Colab</span> <span class="pre">Notebooks</span></code>.</p>
+<p>To save your progress, make a copy of this notebook in Colab <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Save</span> <span class="pre">a</span> <span class="pre">copy</span> <span class="pre">in</span> <span class="pre">Drive</span></code> and you’ll find it in <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Drive</span> <span class="pre">&gt;</span> <span class="pre">Colab</span> <span class="pre">Notebooks</span></code>.</p>
 </div>
 <p>Part of the MATLAB tutorials in CME 100 features a condensed set of notes, which we’ve reproduced here in Python.</p>
 <section id="basic-operations">
 <h2>1. Basic operations<a class="headerlink" href="#basic-operations" title="Link to this heading">#</a></h2>
 <section id="a-using-python-as-a-calculator">
 <h3>(a) Using Python as a calculator<a class="headerlink" href="#a-using-python-as-a-calculator" title="Link to this heading">#</a></h3>
+<p>You can always type numerical expressions and perform a direct computation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">5</span>
@@ -554,6 +561,8 @@ document.write(`
 </section>
 <section id="b-defining-scalar-variables">
 <h3>(b) Defining scalar variables<a class="headerlink" href="#b-defining-scalar-variables" title="Link to this heading">#</a></h3>
+<p>This is done with the <code class="docutils literal notranslate"><span class="pre">=</span></code> assignment operator.
+<code class="docutils literal notranslate"><span class="pre">variable_name</span> <span class="pre">=</span> <span class="pre">value</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
@@ -604,7 +613,8 @@ document.write(`
 </section>
 <section id="c-defining-arrays-and-using-array-elements-in-computation">
 <h3>(c) Defining arrays and using array elements in computation<a class="headerlink" href="#c-defining-arrays-and-using-array-elements-in-computation" title="Link to this heading">#</a></h3>
-<p>🚨 Remember that Python is 0-indexed!</p>
+<p>🚨 Remember that Python is 0-indexed!
+Otherwise the syntax is <code class="docutils literal notranslate"><span class="pre">array[i]</span></code> to grab the element at the <span class="math notranslate nohighlight">\(i\)</span>th index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -633,13 +643,13 @@ document.write(`
 <h3>(d) Appending arrays<a class="headerlink" href="#d-appending-arrays" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># in native Python</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># in native Python with lists</span>
 <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 
-<span class="c1"># in NumPy</span>
+<span class="c1"># in NumPy with NumPy arrays</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
@@ -661,6 +671,7 @@ document.write(`
 </section>
 <section id="plotting">
 <h2>2. Plotting<a class="headerlink" href="#plotting" title="Link to this heading">#</a></h2>
+<p>This is done with the powerful <a class="reference external" href="https://matplotlib.org/">Matplotlib</a> library.</p>
 <section id="a-basic-plotting">
 <h3>(a) Basic plotting<a class="headerlink" href="#a-basic-plotting" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -719,6 +730,7 @@ document.write(`
 <hr class="docutils" />
 <section id="plotting-in-3d">
 <h2>3. Plotting in 3D<a class="headerlink" href="#plotting-in-3d" title="Link to this heading">#</a></h2>
+<p>This is still done in Matplotlib, but with some special function parameters.</p>
 <section id="a-parametric-curves">
 <h3>(a) Parametric curves<a class="headerlink" href="#a-parametric-curves" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -770,6 +782,12 @@ document.write(`
 </section>
 <section id="creating-a-function">
 <h2>5. Creating a function<a class="headerlink" href="#creating-a-function" title="Link to this heading">#</a></h2>
+<p>The general syntax is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">my_function</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+    <span class="c1"># do something</span>
+    <span class="k">return</span> <span class="n">a_value</span>   <span class="c1"># optional</span>
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">dot_product</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
@@ -811,6 +829,7 @@ document.write(`
 </section>
 <section id="programming-in-python">
 <h2>7. Programming in Python<a class="headerlink" href="#programming-in-python" title="Link to this heading">#</a></h2>
+<p>As with most problems, there are <em>multiple</em> possible solutions, and the idea is we pick the one that is most logical and/or efficient.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">factorial_for</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -885,12 +904,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="2_control-flow_blank.html"
+       href="6_integration_blank.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">T2: Control flow</p>
+        <p class="prev-next-title">T6: Integration</p>
       </div>
     </a>
 </div>

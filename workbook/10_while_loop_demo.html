@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -516,15 +520,21 @@ The <code class="docutils literal notranslate"><span class="pre">while</span></c
 <h2>Summary of commands<a class="headerlink" href="#summary-of-commands" title="Link to this heading">#</a></h2>
 <p>In Python, the general structure is like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
-    <span class="n">do</span> <span class="n">something</span> <span class="n">repeatedly</span> <span class="n">until</span> <span class="n">condition</span> <span class="n">becomes</span> <span class="kc">False</span><span class="o">.</span> 
+    <span class="o">&lt;</span><span class="n">do</span> <span class="n">something</span> <span class="n">repeatedly</span> <span class="n">until</span> <span class="n">condition</span> <span class="n">becomes</span> <span class="kc">False</span><span class="o">&gt;</span>
     <span class="c1"># Try not to get stuck in an infinite loop!</span>
 </pre></div>
 </div>
-<p>We’ll also see the following NumPy commands:</p>
+<p>We’ll also see the following commands:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.absolute.html"><code class="docutils literal notranslate"><span class="pre">np.absolute()</span></code></a> - returns the absolute value of <span class="math notranslate nohighlight">\(x\)</span></p></li>
-<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.sqrt.html"><code class="docutils literal notranslate"><span class="pre">np.sqrt()</span></code></a> - returns the square root of <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.absolute.html"><code class="docutils literal notranslate"><span class="pre">np.absolute(x)</span></code></a> - returns the absolute value of <span class="math notranslate nohighlight">\(x\)</span></p></li>
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.sqrt.html"><code class="docutils literal notranslate"><span class="pre">np.sqrt(x)</span></code></a> - returns the square root of <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3.13/tutorial/datastructures.html#more-on-lists"><code class="docutils literal notranslate"><span class="pre">list.append(x)</span></code></a> - adds the element <code class="docutils literal notranslate"><span class="pre">x</span></code> to the end of an existing <em>list</em> object. (not NumPy array!)</p></li>
 </ul>
+<div class="tip admonition">
+<p class="admonition-title">So which loop should I use?</p>
+<p>Your choice should be based on your stop condition: Do you have a fixed number of iterations, or do you have a fixed criteria?
+Often, the same problem can be solved using either construct (you’ll find that the body of the loop remains largely identical), one will just be more efficient than the other, not to mention more logical when a human is reading the code.</p>
+</div>
 </section>
 <section id="approximating-square-roots">
 <h2>Approximating square roots<a class="headerlink" href="#approximating-square-roots" title="Link to this heading">#</a></h2>
@@ -547,9 +557,11 @@ Plot the absolute value of the error versus the current iteration number.</p>
 <span class="n">thresh</span> <span class="o">=</span> <span class="mf">1e-4</span>
 
 <span class="k">while</span> <span class="n">np</span><span class="o">.</span><span class="n">absolute</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="o">&gt;=</span> <span class="n">thresh</span><span class="p">:</span>
+    <span class="c1"># a slick way to always query the last element of x</span>
     <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span> <span class="o">/</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Numerical solution: </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exact solution: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">absolute</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">)),</span> <span class="s1">&#39;o-&#39;</span><span class="p">)</span>
@@ -559,7 +571,8 @@ Plot the absolute value of the error versus the current iteration number.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.162277665175675 3.1622776601683795
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Numerical solution: 3.162277665175675
+Exact solution: 3.1622776601683795
 </pre></div>
 </div>
 <img alt="../_images/1c6e80c4e0413edc4842ce9ef50c67d3a26b36b35cce9ec4dbef64e6609dcd91.png" src="../_images/1c6e80c4e0413edc4842ce9ef50c67d3a26b36b35cce9ec4dbef64e6609dcd91.png" />

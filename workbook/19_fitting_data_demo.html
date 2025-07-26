@@ -300,6 +300,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/1_fund-plots_blank.html">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
 </ul>
 
@@ -515,18 +519,18 @@ document.write(`
 <h1><span class="section-number">19. </span>Fitting data<a class="headerlink" href="#fitting-data" title="Link to this heading">#</a></h1>
 <p>You will often be collecting data in your work and then fitting a function to that data.
 Maybe it’s to create a generalizable model (e.g., machine learning), extract a property (e.g., the slope), or something else.
-There are many way to do this in Python, and we’ll begin by exploring on such technique.</p>
+There are many way to do this in Python, and we’ll begin by exploring one such technique.</p>
 <section id="summary-of-commands">
 <h2>Summary of commands<a class="headerlink" href="#summary-of-commands" title="Link to this heading">#</a></h2>
 <p>In this exercise, we will demonstrate the following:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html"><code class="docutils literal notranslate"><span class="pre">np.polyfit()</span></code></a> - Construct a least squares polynomial fit.</p></li>
-<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyval.html"><code class="docutils literal notranslate"><span class="pre">np.polyval()</span></code></a> - Evaluate a fitted polynomial at specific values.</p></li>
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html"><code class="docutils literal notranslate"><span class="pre">np.polyfit(x,</span> <span class="pre">y,</span> <span class="pre">deg)</span></code></a> - Construct a least squares polynomial fit of <code class="docutils literal notranslate"><span class="pre">y</span></code> vs <code class="docutils literal notranslate"><span class="pre">x</span></code> of degree <code class="docutils literal notranslate"><span class="pre">deg</span></code>.</p></li>
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyval.html"><code class="docutils literal notranslate"><span class="pre">np.polyval(p,</span> <span class="pre">x)</span></code></a> - Evaluate a fitted polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> at specific values <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
 </ul>
 </section>
 <section id="reynolds-number">
 <h2>Reynolds number<a class="headerlink" href="#reynolds-number" title="Link to this heading">#</a></h2>
-<p>Reynolds number (<span class="math notranslate nohighlight">\(\text{Re}\)</span>) is a non-dimensional parameter frequently used in fluid mechanics:</p>
+<p>The Reynolds number (<span class="math notranslate nohighlight">\(\text{Re}\)</span>) is a non-dimensional parameter frequently used in fluid mechanics:</p>
 <div class="math notranslate nohighlight">
 \[ \text{Re} = \dfrac{VL}{\nu} \]</div>
 <p>where</p>
@@ -550,7 +554,7 @@ The drag force <span class="math notranslate nohighlight">\(F_{\mathrm{D}}\)</sp
 <li><p><span class="math notranslate nohighlight">\(V\)</span> is the velocity of the sphere.</p></li>
 <li><p><span class="math notranslate nohighlight">\(C_{\mathrm{D}}\)</span> is the drag coefficient (non-dimensional).</p></li>
 </ul>
-<p>In 1851, Stokes had demonstrated that the drag coefficient at low Reynolds numbers was inversely proportional to Re:</p>
+<p>In 1851, <a class="reference external" href="https://en.wikipedia.org/wiki/Stokes%27_law">George G. Stokes</a> had demonstrated that the drag coefficient at low Reynolds numbers was inversely proportional to Re:</p>
 <div class="math notranslate nohighlight">
 \[ C_{\mathrm{D}} = \dfrac{24}{\text{Re}} \quad \text{(low Re)} \quad (1) \]</div>
 <p>A group of students have measured this coefficient for a sphere of radius <span class="math notranslate nohighlight">\(r\)</span> in a wind tunnel.
@@ -581,7 +585,7 @@ Confirm that the data satisfies Stokes’ law.</p>
 </tbody>
 </table>
 </div>
-<p>Taking the logarithm of Equation (1), we obtain:</p>
+<p>Taking the logarithm of Equation 1, we obtain:</p>
 <div class="math notranslate nohighlight">
 \[ \ln(C_{\mathrm{D}}) = \ln(24) - \ln(\text{Re}) \quad (2) \]</div>
 <p>To check whether Stokes’ law is satisfied, we can plot <span class="math notranslate nohighlight">\(\ln(C_{\mathrm{D}})\)</span> vs. <span class="math notranslate nohighlight">\(\ln(\text{Re})\)</span> and see whether the data points fall along a straight line.</p>
@@ -610,7 +614,7 @@ Display its coefficients on the screen and compare them with the theoretical res
 <p>Hints:</p>
 <ul class="simple">
 <li><p>A line is degree 1.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">polyfit()</span></code> command returns a vector containing the coefficients of the polynomial: <span class="math notranslate nohighlight">\(\begin{bmatrix} a_n &amp; \cdots &amp; a_1 &amp; a_0 \end{bmatrix}\)</span> corresponding to <span class="math notranslate nohighlight">\(P(x) = a_n x^n + \cdots + a_1 x^1 + a_0\)</span></p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">polyfit(x,</span> <span class="pre">y)</span></code> command returns a vector <code class="docutils literal notranslate"><span class="pre">a</span></code> containing the coefficients of the polynomial: <span class="math notranslate nohighlight">\(\begin{bmatrix} a_n &amp; \cdots &amp; a_1 &amp; a_0 \end{bmatrix}\)</span> corresponding to <span class="math notranslate nohighlight">\(P(x) = a_n x^n + \cdots + a_1 x^1 + a_0\)</span>; that is, in decreasing powers of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -657,7 +661,7 @@ Add a legend.</p>
 <p class="admonition-title">Tip</p>
 <p>Matplotlib layers lines on top of each other in the order they’re plotted.
 This is very sensible, but not always desirable.
-To make sure the experimental data is on top, we sent the subsequent lines to a lower layer with the <code class="docutils literal notranslate"><span class="pre">zorder</span></code> parameter.</p>
+To make sure the experimental data is more visible on top, we sent the subsequent lines to a lower layer with the <code class="docutils literal notranslate"><span class="pre">zorder</span></code> parameter.</p>
 </div>
 </section>
 <div class="toctree-wrapper compound">
