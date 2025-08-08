@@ -305,6 +305,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/5_optimization_blank.html">T5: Optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/python_speedrun.html">The tl;dr Python speedrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/homework_template.html">Homework template</a></li>
 </ul>
 
     </div>
@@ -540,6 +541,7 @@ This means we need to define a new function that returns the appropriate computa
 In Python, the syntax for defining your own function is:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">my_func_name</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; optional docstring to explain purpose, arguments, etc. &quot;&quot;&quot;</span>
     <span class="n">do</span> <span class="n">something</span>
     <span class="k">return</span> <span class="n">something</span>   <span class="c1"># optional</span>
 </pre></div>
@@ -548,6 +550,7 @@ In Python, the syntax for defining your own function is:</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">def</span></code> at the start is required, as is the colon at the end of the first line.</p></li>
 <li><p>Just like variables, function names should be descriptive.</p></li>
 <li><p>Arguments are optional.</p></li>
+<li><p>Docstrings are optional but very nice to have (for others and future you). No need though if the function is very simple.</p></li>
 <li><p>Returning a value is generally optional, but here we want to return the expression for the analytical function.</p></li>
 </ul>
 <div class="cell docutils container">

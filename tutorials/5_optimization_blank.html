@@ -305,6 +305,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">T5: Optimization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6_integration_blank.html">T6: Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_speedrun.html">The tl;dr Python speedrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="homework_template.html">Homework template</a></li>
 </ul>
 
     </div>
@@ -537,17 +538,24 @@ Here we will demonstrate a few helpful functions that you can use to perform num
 <p>Find the local extrema of <span class="math notranslate nohighlight">\(f(x) = \sin(x^2)\)</span> on the interval <span class="math notranslate nohighlight">\(\left[ -2 \sqrt{\pi}, 2 \sqrt{\pi} \right]\)</span>.
 Identify each point as a minimum or a maximum.</p>
 <p>Our first solution, which isn’t exactly a solution, is to plot the function.
-In Python, the syntax for defining your own function is:</p>
+Though it’s slightly overkill for this problem, we’ll demonstrate how to <strong>write user-defined functions</strong> in Python, which is a good skill for making your code more readable and efficient (what you learn in CS 106A as function <em>decomposition</em>).</p>
+<p>In Python, the syntax for defining your own function is:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">my_func_name</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; optional docstring to explain purpose, arguments, etc. &quot;&quot;&quot;</span>
     <span class="n">do</span> <span class="n">something</span>
     <span class="k">return</span> <span class="n">something</span>   <span class="c1"># optional</span>
+
+<span class="n">my_func_name</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>     <span class="c1"># calling the function</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">def</span></code> at the start is required, as is the colon at the end of the first line.</p></li>
 <li><p>Just like variables, function names should be descriptive.</p></li>
-<li><p>Arguments are optional.</p></li>
-<li><p>Returning a value is generally optional, but here we want to return the expression for the analytical function.</p></li>
+<li><p>Arguments are optional, but you’ll probably have some input variables.</p></li>
+<li><p>Docstrings are optional but very nice to have (for others and future you). No need though if the function is very simple.</p></li>
+<li><p>Variables defined in the function body (including arguments) have local scope, i.e., they don’t exist outside the function.</p></li>
+<li><p>Returning a value is generally optional, but you’ll probably have something.</p></li>
+<li><p>Calling the function works as with any other built-in function.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -621,7 +629,7 @@ Pay attention to how we constructed the 3D axes!</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\enzec\AppData\Local\Temp\ipykernel_14172\3338264623.py:3: RuntimeWarning: invalid value encountered in sqrt
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\enzec\AppData\Local\Temp\ipykernel_508\3338264623.py:3: RuntimeWarning: invalid value encountered in sqrt
   Z = (X - Y + 2) ** 2 + np.sqrt(X + Y)
 </pre></div>
 </div>
@@ -660,7 +668,7 @@ Then your <code class="docutils literal notranslate"><span class="pre">x0</span>
          Function evaluations: 161
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\enzec\AppData\Local\Temp\ipykernel_14172\2150192953.py:2: RuntimeWarning: invalid value encountered in sqrt
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\enzec\AppData\Local\Temp\ipykernel_508\2150192953.py:2: RuntimeWarning: invalid value encountered in sqrt
   return (u[0] - u[1] + 2) ** 2 + np.sqrt(u[0] + u[1])
 </pre></div>
 </div>
