@@ -150,4 +150,6 @@ parts:
     - file: tutorials/5_optimization_blank
     - file: tutorials/6_integration_blank
     - file: tutorials/python_speedrun
+    - file: tutorials/homework_template
+      title: Homework template
 
