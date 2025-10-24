@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>T1: Fundamentals and plotting &#8212; My sample book</title>
+    <title>T1: Fundamentals and plotting &#8212; CME 100 Python Workbook</title>
   
   
   
@@ -53,10 +53,25 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-T13P9Y0RNL"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-T13P9Y0RNL');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-T13P9Y0RNL');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/1_fund-plots_blank';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://enze-chen.github.io/cme100-python/tutorials/1_fund-plots_blank.html" />
@@ -64,7 +79,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="T2: Control flow" href="2_control-flow_blank.html" />
-    <link rel="prev" title="4. Basic matrix operations" href="../workbook/24_linalg_demo.html" />
+    <link rel="prev" title="Additional matrix operations - Your turn" href="../workbook/25_linalg_more_blank.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,8 +171,8 @@
       
     
     
-    <img src="../_static/icme-logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="../_static/icme-logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+    <img src="../_static/icme-logo.png" class="logo__image only-light" alt="CME 100 Python Workbook - Home"/>
+    <script>document.write(`<img src="../_static/icme-logo.png" class="logo__image only-dark" alt="CME 100 Python Workbook - Home"/>`);</script>
   
   
 </a></div>
@@ -195,19 +210,115 @@
 <li class="toctree-l2"><a class="reference internal" href="../workbook/2_scalars_blank.html">Your turn</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/3_vector_ops_1_demo.html">3. Vector operations I</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/3_vector_ops_1_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/4_vector_ops_2_demo.html">4. Vector operations II</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/4_vector_ops_2_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/5_vector_ops_3_demo.html">5. Vector operations III</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/5_vector_ops_3_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/6_plots_1D_demo.html">6. Plots in 1D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/6_plots_1D_blank.html">Your turn</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programming</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../workbook/7_programming_demo.html">3. How to use a script</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/7_prog_script_demo.html">7. How to use a script</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/7_prog_script_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/8_if_else_demo.html">8. If—elif—else statements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/8_if_else_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/9_for_loop_demo.html">9. For loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/9_for_loop_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/10_while_loop_demo.html">10. While loops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/10_while_loop_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/11_prog_car_demo.html">11. Car motion example</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/11_prog_car_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/12_prog_circuit_demo.html">12. Electric circuit example</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/12_prog_circuit_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/13_prog_newton_demo.html">13. Newton’s method example</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/13_prog_newton_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/14_surfaces_3D_demo.html">14. Surfaces in 3D</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/14_surfaces_3D_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/15_gradient_demo.html">15. Gradient</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/15_gradient_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/16_motion_3D_demo.html">16. Motion of a particle</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/16_motion_3D_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/17_level_curves_demo.html">17. Level curves</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/17_level_curves_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/18_function_minima_demo.html">18. Finding minima of functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/18_function_minima_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/19_fitting_data_demo.html">19. Fitting data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/19_fitting_data_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/20_random_numbers_demo.html">20. Vectors of random numbers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/20_random_numbers_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/21_random_numbers_2_demo.html">21. More random numbers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/21_random_numbers_2_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/22_integration_demo.html">22. Numerical integration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/22_integration_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/23_work_path_demo.html">23. Computing work done by a force along a path</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/23_work_path_blank.html">Your turn</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Linear algebra</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../workbook/24_linalg_demo.html">4. Basic matrix operations</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/24_linalg_basic_demo.html">24. Basic matrix operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/24_linalg_basic_blank.html">Your turn</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../workbook/25_linalg_more_demo.html">25. Additional matrix operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workbook/25_linalg_more_blank.html">Your turn</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">T1: Fundamentals and plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_control-flow_blank.html">T2: Control flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_matrices_blank.html">T3: Matrices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_matrix_ops_blank.html">T4: Matrix operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_optimization_blank.html">T5: Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_integration_blank.html">T6: Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_speedrun.html">The tl;dr Python speedrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="homework_template.html">Homework template</a></li>
 </ul>
 
     </div>
@@ -379,7 +490,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -395,6 +508,27 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performing-calculations">Performing calculations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays-and-vectors">Arrays and vectors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#you-want-exactly-n-equally-spaced-values">You want exactly <span class="math notranslate nohighlight">\(N\)</span> equally spaced values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#you-want-values-equally-spaced-by-delta">You want values equally spaced by <span class="math notranslate nohighlight">\(\delta\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-arrays">Operations on arrays</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">Plotting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-parametric-curves">Plotting parametric curves</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-customizing-plots">Further customizing plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subplots">Subplots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#script-files">Script files</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -406,15 +540,441 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="t1-fundamentals-and-plotting">
 <h1>T1: Fundamentals and plotting<a class="headerlink" href="#t1-fundamentals-and-plotting" title="Link to this heading">#</a></h1>
-<p>Temp</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Click the <span class="fa fa-rocket"></span> and open this notebook in Colab to enable interactivity.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To save your progress, make a copy of this notebook in Colab <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Save</span> <span class="pre">a</span> <span class="pre">copy</span> <span class="pre">in</span> <span class="pre">Drive</span></code> and you’ll find it in <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Drive</span> <span class="pre">&gt;</span> <span class="pre">Colab</span> <span class="pre">Notebooks</span></code>.</p>
+</div>
+<p>Previously in this book we’ve already <a class="reference internal" href="../workbook/0_usage.html"><span class="std std-doc">motivated the use of Python</span></a>, so in this first tutorial we’ll jump right into its functionality!</p>
+<section id="performing-calculations">
+<h2>Performing calculations<a class="headerlink" href="#performing-calculations" title="Link to this heading">#</a></h2>
+<p>We can use Python as a calculator, with the following operators:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code>: addition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code>: subtraction</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code>: multiplication</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code>: division</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**</span></code>: exponentiation.</p></li>
+</ul>
+<p>Try computing <span class="math notranslate nohighlight">\(\sqrt{3^2 + 4^2}\)</span> below.
+Recall that <span class="math notranslate nohighlight">\(\sqrt{x} = x^{1/2}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Write your solution below</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Decimals (the <code class="docutils literal notranslate"><span class="pre">float</span></code> type in Python) can be input like normal or as scientific notation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mf">0.0041</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">4.1e-3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0041
+0.0041
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since Python was not developed for scientific computing, it doesn’t have built-in functions and constants.
+But it has many freely available packages that do, including the popular <a class="reference external" href="https://numpy.org/">NumPy</a> library.
+To import the library, we use the</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<p>syntax to give it an alias, and then we can call functions and constants from the <code class="docutils literal notranslate"><span class="pre">np</span></code> namespace.
+Below we will compute</p>
+<div class="math notranslate nohighlight">
+\[ \sqrt{1 - \sin^2 \left( \frac{2}{3} \pi \right)} \]</div>
+<p>using the functions <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.sqrt.html"><code class="docutils literal notranslate"><span class="pre">np.sqrt(x)</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.sin.html"><code class="docutils literal notranslate"><span class="pre">np.sin(x)</span></code></a>, and the constant <a class="reference external" href="https://numpy.org/doc/stable/reference/constants.html#numpy.pi"><code class="docutils literal notranslate"><span class="pre">np.pi</span></code></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Write your solution below</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Results of computation can be stored in <strong>variables</strong> by using the assignment operator, <code class="docutils literal notranslate"><span class="pre">=</span></code> (not for checking equality!).
+For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5.2</span></code> would create a variable named <code class="docutils literal notranslate"><span class="pre">x</span></code> and store 5.2 in it.
+If <code class="docutils literal notranslate"><span class="pre">x</span></code> already exists, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5.2</span></code> will replace the old value in <code class="docutils literal notranslate"><span class="pre">x</span></code> with 5.2, even if the old value wasn’t a decimal!
+After a variable is made, it can be used in other expressions.</p>
+<p>In the cell below, define a variable that holds the value of <span class="math notranslate nohighlight">\(\sqrt{2 \pi e}\)</span> and use it to compute</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{\sqrt{2\pi e}} e^{\sqrt{\frac{2}{\pi e}}} + \sqrt{2 \pi e}, \]</div>
+<p>where <span class="math notranslate nohighlight">\(e\)</span> is Euler’s constant <a class="reference external" href="https://numpy.org/doc/stable/reference/constants.html#numpy.e"><code class="docutils literal notranslate"><span class="pre">np.e</span></code></a> and <span class="math notranslate nohighlight">\(e^x\)</span> is encoded as <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.exp.html"><code class="docutils literal notranslate"><span class="pre">np.exp()</span></code></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Write your solution below</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Creating variables reduces the amount of calculation (and coding) at the cost of additional memory.
+This speed-memory trade-off is very common in programming.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A variable name must start with an English alphabet and may only contain letters, numbers, and underscores (_).
+It is also Python style to write variable names in snake case, <code class="docutils literal notranslate"><span class="pre">lowercase_like_this</span></code>.</p>
+</div>
+</section>
+<section id="arrays-and-vectors">
+<h2>Arrays and vectors<a class="headerlink" href="#arrays-and-vectors" title="Link to this heading">#</a></h2>
+<p>To create a row vector in Python, we will use brackets and commas to first create a <strong>list</strong> data structure, and then use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html"><code class="docutils literal notranslate"><span class="pre">np.array()</span></code></a> constructor from NumPy.</p>
+<p>To read from an entry of a vector in a variable, we use square brackets and the index.
+For example: <code class="docutils literal notranslate"><span class="pre">x[1]</span></code> refers to the second entry of array <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Python is <strong>0-indexed</strong> which means the first element of an array is <code class="docutils literal notranslate"><span class="pre">array[0]</span></code>, not <code class="docutils literal notranslate"><span class="pre">1</span></code>!
+This is one of the biggest differences between Python and MATLAB.</p>
+</div>
+<p>Below we will assign <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 &amp; 2 &amp; 3 \end{bmatrix}\)</span> to <code class="docutils literal notranslate"><span class="pre">x</span></code> and then read out the second entry of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Write your solution below</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Assignment to an entry of a vector also works.
+If the referenced entry of a vector does not exist, Python will throw an error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="ne">IndexError</span>: index 3 is out of bounds for axis 0 with size 3
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are some helper functions that make it easier to create vectors, depending on your need.
+A detailed exposition is provided <a class="reference external" href="https://numpy.org/doc/stable/user/basics.creation.html">in the docs</a>.</p>
+<section id="you-want-exactly-n-equally-spaced-values">
+<h3>You want exactly <span class="math notranslate nohighlight">\(N\)</span> equally spaced values<a class="headerlink" href="#you-want-exactly-n-equally-spaced-values" title="Link to this heading">#</a></h3>
+<p>Here you want to use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linspace.html"><code class="docutils literal notranslate"><span class="pre">np.linspace(start,</span> <span class="pre">stop,</span> <span class="pre">num)</span></code></a> function, which accepts as arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code>: The first value of your array. Required.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stop</span></code>: The last value of your array. Required.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num</span></code>: The total number of elements in your array, equally spaced between start and stop <em>inclusive</em> (by default).
+If you do not specify this parameter, the default is <code class="docutils literal notranslate"><span class="pre">50</span></code>.</p></li>
+</ul>
+</section>
+<section id="you-want-values-equally-spaced-by-delta">
+<h3>You want values equally spaced by <span class="math notranslate nohighlight">\(\delta\)</span><a class="headerlink" href="#you-want-values-equally-spaced-by-delta" title="Link to this heading">#</a></h3>
+<p>Here you want to use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.arange.html"><code class="docutils literal notranslate"><span class="pre">np.arange(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code></a> function, which accepts as arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code>: The first value of your array. Default is <code class="docutils literal notranslate"><span class="pre">0</span></code>, but best to always specify.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stop</span></code>: The last value of your array, <strong>not inclusive</strong>. Required.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">step</span></code>: The increment between values starting from <code class="docutils literal notranslate"><span class="pre">start</span></code> and going up to <em>but not including</em> <code class="docutils literal notranslate"><span class="pre">stop</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+</ul>
+<p>Try it now with the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">np.linspace(1,</span> <span class="pre">9,</span> <span class="pre">4)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.arange(1,</span> <span class="pre">2.5,</span> <span class="pre">9)</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Write your solution below</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function to get the length of an array.
+We can also use the built-in <code class="docutils literal notranslate"><span class="pre">array.size</span></code> attribute.
+Notice, what does <code class="docutils literal notranslate"><span class="pre">array.shape</span></code> do?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>    <span class="c1"># [7, 14, ..., 56]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+8
+(8,)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="operations-on-arrays">
+<h3>Operations on arrays<a class="headerlink" href="#operations-on-arrays" title="Link to this heading">#</a></h3>
+<p>NumPy arrays of the same dimension can be added and subtracted.
+Don’t try this with basic lists!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-3 -3]
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: operands could not be broadcast together with shapes (2,) (3,) 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Multiplication, division, and exponentiation between two vectors of the same dimension can be performed entrywise using the standard operators.
+Try it below for <code class="docutils literal notranslate"><span class="pre">[4,</span> <span class="pre">3]</span></code> raised to the power of <code class="docutils literal notranslate"><span class="pre">[0.5,</span> <span class="pre">2]</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Write your solution below</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A vector with one element is considered a <strong>scalar</strong>.
+Entrywise operations between a scalar and a vector will cause <strong>scalar expansion</strong>, also known as <strong>array broadcasting</strong>.
+This can be a good thing, but often it isn’t!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first example - comparison</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+
+<span class="c1"># second example</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># third example</span>
+<span class="nb">print</span><span class="p">(((</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3 4]
+[3 4]
+[  0   1   4   9  16  25  36  49  64  81 100]
+[0. 1. 0. 1. 0. 1.]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Scalar functions (such as those mentioned above) can also be applied to a vector.
+They will be computed on each entry, giving the result in a vector with the same dimension as the input.
+Try it below with:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">np.sqrt([1,</span> <span class="pre">4,</span> <span class="pre">9,</span> <span class="pre">16,</span> <span class="pre">25])</span></code> (note it autoconverts the argument)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.sin(np.arange(0,</span> <span class="pre">2.1,</span> <span class="pre">0.5)</span> <span class="pre">*</span> <span class="pre">np.pi)</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Write your solution below</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="plotting">
+<h2>Plotting<a class="headerlink" href="#plotting" title="Link to this heading">#</a></h2>
+<p>There are many choices for plotting libraries, arguably the most popular one being <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>.
+The name is actually a combination of “MATLAB,” “plot,” and “library,” so many things will look similar to MATLAB.
+Like NumPy, the documentation is quite good—and they have <a class="reference external" href="https://matplotlib.org/cheatsheets/">cheat sheets</a>!</p>
+<p>The general recipe of making plots with Matplotlib has four (maybe five) parts.</p>
+<p><strong>1. Imports</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+<p>is the bare minimum, and it typically uses an alias (like NumPy).
+Other packages (like <a class="reference external" href="https://matplotlib.org/stable/users/explain/colors/colormaps.html">colormaps</a>) are also possible.</p>
+<p><strong>2. Create objects</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">fig</span></code> Figure is the entire graph object and <code class="docutils literal notranslate"><span class="pre">ax</span></code> Axes is the coordinate axes.
+<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html"><code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code></a> is quite powerful.</p>
+<p><strong>3. Draw data</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>for example, will create a standard line chart.
+There are many <a class="reference external" href="https://matplotlib.org/stable/plot_types/index.html">plot types</a> available!</p>
+<p><strong>4. Styling (optional)</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>among other functions can add labels and customize axis features.</p>
+<p><strong>5. Display and save</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;filename.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>These commands go at the very end.
+<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html"><code class="docutils literal notranslate"><span class="pre">plt.show()</span></code></a> displays the plot in the notebook while <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.savefig.html"><code class="docutils literal notranslate"><span class="pre">fig.savefig()</span></code></a> saves it to disk.</p>
+<p>We’ll create some 2D plots in Python using <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html"><code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code></a>.
+The first input is a vector of <span class="math notranslate nohighlight">\(x\)</span>-coordinates and the second input is a vector of <span class="math notranslate nohighlight">\(y\)</span>-coordinates.
+Both vectors must have the same length.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c8573da04a1834d06fd358c36b072dc03f9f2ae4ec31a4188291d547e602d0e7.png" src="../_images/c8573da04a1834d06fd358c36b072dc03f9f2ae4ec31a4188291d547e602d0e7.png" />
+</div>
+</div>
+<p>Note that <strong>unlike MATLAB</strong>, the second call to <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> does not erase the previous plot.
+In fact, it default cycles to a different color to differentiate the two.
+No need for <code class="docutils literal notranslate"><span class="pre">hold</span> <span class="pre">on</span></code>!</p>
+<p>Let’s try another plot with some customization.
+Type the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="n">x</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Write your solution below</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="plotting-parametric-curves">
+<h3>Plotting parametric curves<a class="headerlink" href="#plotting-parametric-curves" title="Link to this heading">#</a></h3>
+<p>Take the following problem: Draw a curve in the plane parametrized by <span class="math notranslate nohighlight">\(x(t) = t \cos t\)</span> and <span class="math notranslate nohighlight">\(y(t) = t \sin t\)</span> for <span class="math notranslate nohighlight">\(t \in [0, 6\pi]\)</span>.
+We could tackle the problem as follows:</p>
+<ol class="arabic simple">
+<li><p>Identify the domain of the parameter and create a vector of parameter values.
+We <em>discretize</em> the interval <span class="math notranslate nohighlight">\([0, 6\pi]\)</span> into 100 (or any large number) of points using <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">np.linspace(0,</span> <span class="pre">6*np.pi,</span> <span class="pre">100)</span></code>.</p></li>
+<li><p>Define the coordinate vectors for <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> separately, such as <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">t</span> <span class="pre">*</span> <span class="pre">np.cos(t)</span></code>.</p></li>
+<li><p>Make the plot using <code class="docutils literal notranslate"><span class="pre">ax.plot(x,</span> <span class="pre">y)</span></code>.</p></li>
+</ol>
+<p>Now, in the space below, compute the following: Draw an ellipse with major and minor radii of 2 and 1, respectively.
+It is parametrized by <span class="math notranslate nohighlight">\(x(\theta) = 2 \cos \theta\)</span> and <span class="math notranslate nohighlight">\(y(\theta) = \sin \theta\)</span>, where <span class="math notranslate nohighlight">\(\theta\)</span> is the parameter.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Write your solution below</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the output above does not look like the ellipse you’re expecting, it’s likely because the aspect ratio of the plot is not 1:1, i.e., 1 unit on the <span class="math notranslate nohighlight">\(x\)</span>-axis doesn’t have the same size as 1 unit on the <span class="math notranslate nohighlight">\(y\)</span>-axis.
+Use <code class="docutils literal notranslate"><span class="pre">ax.set(aspect='equal')</span></code> to fix this.</p>
+</section>
+<section id="further-customizing-plots">
+<h3>Further customizing plots<a class="headerlink" href="#further-customizing-plots" title="Link to this heading">#</a></h3>
+<p>The <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html"><code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code></a> command can take additional arguments to control how the plot is drawn.
+For example, if we had <code class="docutils literal notranslate"><span class="pre">ax.plot(x,</span> <span class="pre">y,</span> <span class="pre">'r--')</span></code>, then we would get a different ellipse.
+Check out the documentation to see all the features.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/abe6e516a4a65a9d9928bd475578a15c97358c0eb7ec9d2fcf4b1e3a3ccc8ef5.png" src="../_images/abe6e516a4a65a9d9928bd475578a15c97358c0eb7ec9d2fcf4b1e3a3ccc8ef5.png" />
+</div>
+</div>
+<p>Can you make an ellipse with a black dotted line instead?</p>
+<p>Below we give many more customization for you to explore.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;ellipse&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/8c82ccc172bc5d298ece43319d37daf8ea424760e615ab8d3dea0bf275a332ba.png" src="../_images/8c82ccc172bc5d298ece43319d37daf8ea424760e615ab8d3dea0bf275a332ba.png" />
+</div>
+</div>
+<p>You can add legends in a couple of different ways.
+For now, we’ll show the syntax where you add <code class="docutils literal notranslate"><span class="pre">label=</span></code> as a keyword argument to <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code>, and call <code class="docutils literal notranslate"><span class="pre">ax.legend()</span></code> at the end.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;sin(x)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;cos(x)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/109a0345c172c44736b254baee398bd3231ada2446f1f44e312061d78643ea4a.png" src="../_images/109a0345c172c44736b254baee398bd3231ada2446f1f44e312061d78643ea4a.png" />
+</div>
+</div>
+</section>
+<section id="subplots">
+<h3>Subplots<a class="headerlink" href="#subplots" title="Link to this heading">#</a></h3>
+<p>If you found it odd that we called <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code> (plural) but only created one set of axes, well here’s how we can get more.
+By specifying <code class="docutils literal notranslate"><span class="pre">nrows</span></code> and <code class="docutils literal notranslate"><span class="pre">ncols</span></code>, we can get a whole grid of axes to draw on.
+For example, below we’ll plot on a specific subplot in a 3-by-2 grid of subplots.
+We’ll also make them share an <span class="math notranslate nohighlight">\(x\)</span>- and <span class="math notranslate nohighlight">\(y\)</span>-axis (they don’t have to and often won’t, but it can make the labels cleaner).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;g--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/437ad70dd7b9b42a3fa9399a7feb2a7f33411509d63f03c547c4d817fe412324.png" src="../_images/437ad70dd7b9b42a3fa9399a7feb2a7f33411509d63f03c547c4d817fe412324.png" />
+</div>
+</div>
+<p>For you: Can you customize the above code to add a curve (in a different style) to another subplot?</p>
+</section>
+<section id="script-files">
+<h3>Script files<a class="headerlink" href="#script-files" title="Link to this heading">#</a></h3>
+<p>While our commands are nicely stored in this Jupyter notebook, maybe you actually want a Python file (<code class="docutils literal notranslate"><span class="pre">.py</span></code> extension) to run from the command line.
+For the most part, you can take all the commands we’ve written them here, save them into a <code class="docutils literal notranslate"><span class="pre">test.py</span></code> file, and then call <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">test.py</span></code> from the command line in the same directory.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -448,12 +1008,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../workbook/24_linalg_demo.html"
+       href="../workbook/25_linalg_more_blank.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Basic matrix operations</p>
+        <p class="prev-next-title">Additional matrix operations - Your turn</p>
       </div>
     </a>
     <a class="right-next"
@@ -471,6 +1031,34 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performing-calculations">Performing calculations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays-and-vectors">Arrays and vectors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#you-want-exactly-n-equally-spaced-values">You want exactly <span class="math notranslate nohighlight">\(N\)</span> equally spaced values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#you-want-values-equally-spaced-by-delta">You want values equally spaced by <span class="math notranslate nohighlight">\(\delta\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-arrays">Operations on arrays</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting">Plotting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-parametric-curves">Plotting parametric curves</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-customizing-plots">Further customizing plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subplots">Subplots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#script-files">Script files</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
@@ -505,8 +1093,8 @@ By Enze Chen and Vadim Khayms
   <div class="footer-item">
     
 <div class="extra_footer">
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-  <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+  <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" />
 </a>
 
 </div>
