@@ -25,6 +25,8 @@ html:
   use_repository_button   : false     # button for users to look at the source code in GitHub.
   home_page_in_navbar     : true      # include home page in the left Navigation Bar 
   use_multitoc_numbering  : true      # chapter numberings continue across sections
+  analytics:
+    google_analytics_id   : G-KJL1PCBFEQ
   baseurl                 : https://enze-chen.github.io/cme100-python   # The base URL where the book is hosted
   favicon                 : assets/fig/stanford-s.png      # the icon in the browser tab
   extra_footer            : |
